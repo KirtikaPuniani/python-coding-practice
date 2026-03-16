@@ -10,3 +10,7 @@ def add(a,b):
 
 sum = add(46568,67434)
 print(sum)
+
+#using lambda
+sum = lambda a, b: a+b
+print(sum(46568,67434))
