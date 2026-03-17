@@ -5,3 +5,10 @@
 # Simple_Interest = (principal * rate * time) / 100
 # print(Simple_Interest)
 
+#using function
+def simple_interest(p,r,t):
+    SI = (p * r * t) / 100
+    return SI
+
+SI = simple_interest(10000,3,1)
+print(SI)
