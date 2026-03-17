@@ -6,5 +6,5 @@ rate = float(input("please enter the rate of interest per annum: "))
 time = float(input("please enter the time period in years: "))
 n = float(input("please enter the number of times interest is compounded per year: "))
 
-Compound_Interest = principal * (1 + (rate/n)) ** (n*time)
+Compound_Interest = principal * (1 + (rate/100*n)) ** (n*time)
 print(Compound_Interest)
