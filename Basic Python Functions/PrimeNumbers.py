@@ -1,14 +1,14 @@
 # all prime numbers in an interval
-class FindPrimeNumber():
-    def primenumber(self, n):
-        if n <= 1:
-            return False
-        
-        for i in range(2, int(n**0.5)+1):
-            if n % i == 0:
-                return False
-        
-        return True
+import math
+
+start = int(input("Enter start: "))
+end = int(input("Enter end: "))
+
+for num in range(start, end + 1):
     
-x = FindPrimeNumber()
-print(x.primenumber(20))
+    if num > 1:
+        for i in range(2, int(math.sqrt(num)) + 1):
+            if num % i == 0:
+                break
+        else:
+            print(num)
