@@ -12,29 +12,3 @@ This repository contains Python coding practice modules designed to strengthen p
     5. Build a habit of writing clean and efficient code
 
 Build a habit of writing clean and efficient codeThis repository contains Python coding practice modules designed to strengthen problem-solving skills and improve programming fundamentals. The goal of this project is to build a strong foundation in Python by solving different types of problems and implementing concepts that are useful for real-world projects.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
