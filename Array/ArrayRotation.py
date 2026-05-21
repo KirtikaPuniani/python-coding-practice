@@ -27,4 +27,13 @@ print(arr)
 
 #------------------------------------------------------#
 
-#Method 3
+#Method 3 - Using temporary array
+arr = [1, 2, 3, 4, 5, 6, 7]
+d = 3
+n = len(arr)
+
+temp = arr[:d]
+arr[:n-d] = arr[d:]
+arr[n-d:] = temp
+
+print(arr)
