@@ -14,3 +14,7 @@ arr.reverse()
 arr[:n-d] = arr[:n-d][::-1]
 arr[n-d:] = arr[n-d:][::-1]
 print(arr)
+
+#arr[d:]: elements from index d to end.
+#arr[:d]: first d elements.
+#arr[:] = arr[d:] + arr[:d]: updates array in-place.
