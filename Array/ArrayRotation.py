@@ -37,3 +37,20 @@ arr[:n-d] = arr[d:]
 arr[n-d:] = temp
 
 print(arr)
+
+# temp = arr[:d] store the first d elements.
+# arr[:n-d] = arr[d:] shift the remaining elements left.
+# arr[n-d:] = temp place the stored elements at the end.
+
+#------------------------------------------------------#
+
+#Method 4 - One by one rotation
+arr = [1, 2, 3, 4, 5, 6, 7]
+d = 3
+n = len(arr)
+
+for i in range(d):
+    arr.append(arr.pop(0))
+print(arr)
+# arr.pop(0) removes the first element and returns it.
+# arr.append(...) adds the removed element to the end of the array.
