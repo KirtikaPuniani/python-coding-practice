@@ -13,11 +13,13 @@
 
 #Using Simgle Pass:
 
+arr = [6,5,4,4]
+n = len(arr)
 
+increasing = all(arr[i] <= arr[i+1] for i in range(n-1))
+decreasing = all(arr[i] >= arr[i+1] for i in range(n-1))
 
-
-
-
+print(increasing or decreasing)
 
 
 # def isMonotonic(arr):
