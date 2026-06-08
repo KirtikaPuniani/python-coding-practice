@@ -42,13 +42,20 @@ else:
 
 print(y)
 
-# def isMonotonic(arr):
-#     increasing = decreasing = True
+
+
+def isMonotonic(arr):
+    increasing = decreasing = True
     
-#     for i in range(1, len(arr)):
-#         if arr[i] > arr[i - 1]:
-#             decreasing = False
-#         elif arr[i] < arr[i - 1]:
-#             increasing = False
+    for i in range(1, len(arr)):
+        if arr[i] > arr[i - 1]:
+            decreasing = False
+        elif arr[i] < arr[i - 1]:
+            increasing = False
             
-#     return increasing or decreasing
+    return increasing or decreasing
+
+# This method uses two boolean variables, increasing and decreasing, to track the direction of the array.
+# It iterates through the array once, comparing each element to the previous one.
+# If it finds an increase, it sets decreasing to False. If it finds a decrease, it sets increasing to False.
+# Finally, it returns True if either increasing or decreasing is still True, indicating that the array is monotonic.
