@@ -22,7 +22,8 @@ decreasing = all(arr[i] >= arr[i+1] for i in range(n-1))
 print(increasing or decreasing)
 
 
-#Using Direcrtional Variables:
+#Using Direcrtional Variables: to determine the initial direction (increasing or decreasing) using the first two 
+#elements, then compares the rest of the array to ensure the direction never changes.
 arr = [6,5,4,4]
 n = len(arr)
 
