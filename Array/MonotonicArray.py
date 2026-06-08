@@ -22,6 +22,25 @@ decreasing = all(arr[i] >= arr[i+1] for i in range(n-1))
 print(increasing or decreasing)
 
 
+#Using Direcrtional Variables:
+arr = [6,5,4,4]
+n = len(arr)
+
+if n <= 2:
+    print(True)
+else:
+    x = arr[1] - arr[0]
+    y = True
+    for i in range(2, n):
+        if x == 0:
+            x = arr[i] - arr[i-1]
+            continue
+        if (x > 0 and arr[i] < arr[i-1]) or (x < 0 and arr[i] > arr[i-1]):
+            y = False
+            break
+
+print(y)
+
 # def isMonotonic(arr):
 #     increasing = decreasing = True
     
