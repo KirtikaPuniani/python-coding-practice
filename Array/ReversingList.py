@@ -25,3 +25,18 @@ print(rev)
 # reverse order. By passing the original list to the reversed() function and then
 # converting the result to a list, we get a new list that contains the elements in
 # reverse order. This does not modify the original list, but instead creates a new
+
+
+
+
+#Using a loop to reverse a list
+list = [10, 20, 30, 40, 50, 60]
+i, j = 0, len(list) - 1
+while i < j:
+    list[i], list[j] = list[j], list[i]
+    i += 1
+    j -= 1
+print(list)
+#This code uses a while loop to swap elements from the start and end of the list until
+# it reaches the middle. The variables i and j are used to keep track of the indices
+# of the elements being swapped. After the loop completes, the list is reversed in place.
