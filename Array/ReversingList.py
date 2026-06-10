@@ -14,3 +14,14 @@ print(reversed_list)
 # original list. The [::-1] slice notation means to take the elements of the list in 
 # reverse order. This does not modify the original list, but instead creates a new 
 # list with the elements in reverse order.
+
+
+
+#Using reversed()
+a = [10, 20, 30, 40, 50, 60]
+rev = list(reversed(a))
+print(rev)
+#The reversed() function returns an iterator that yields the elements of the list in
+# reverse order. By passing the original list to the reversed() function and then
+# converting the result to a list, we get a new list that contains the elements in
+# reverse order. This does not modify the original list, but instead creates a new
