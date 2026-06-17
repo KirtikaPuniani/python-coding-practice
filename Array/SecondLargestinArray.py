@@ -14,3 +14,6 @@ def secondLargest(arr):
             second_largest = a
             
     return second_largest
+
+x = secondLargest(arr)
+print("Second largest element in the list:", x)
