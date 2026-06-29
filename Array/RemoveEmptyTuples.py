@@ -6,7 +6,7 @@ result = []
 def removemptyTuples():
     for a in arr:
         if a:
-            result.append(result)
+            result.append(a)
     return result
 
 print(removemptyTuples())
