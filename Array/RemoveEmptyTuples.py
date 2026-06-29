@@ -13,7 +13,7 @@ print(removemptyTuples())
 
 
 
-# from itertools import  compress
-# arr = [(1,2,3,4),(),(5,6),(),(7,8,9),(),(10)]
-# result = list(compress(arr, [bool(t) for t in arr]))
-# print(result)
+from itertools import  compress
+arr = [(1,2,3,4),(),(5,6),(),(7,8,9),(),(10)]
+result = list(compress(arr, [bool(t) for t in arr]))
+print(result)
