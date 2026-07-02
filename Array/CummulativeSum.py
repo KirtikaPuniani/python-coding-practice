@@ -14,9 +14,12 @@ l = [1, 2, 3, 4]
 res = np.cumsum(l)
 print(res)
 
-# arr = [2,3,5,7,9,18,45]
-
-# def cummulativeSum(arr):
-#     sum = 0
-#     for a in arr:
-        
+arr = [2,3,5,7,9,18,45]
+def cummulativeSum(arr):
+    total = 0
+    result = []
+    for num in arr:
+        total += num
+        result.append(total)
+    return result
+print(cummulativeSum(arr))
