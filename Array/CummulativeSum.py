@@ -8,6 +8,12 @@ arr = [2,3,5,7,9,18,45]
 result = list(itertools.accumulate(arr))
 print(result)
 
+
+import numpy as np
+l = [1, 2, 3, 4]
+res = np.cumsum(l)
+print(res)
+
 # arr = [2,3,5,7,9,18,45]
 
 # def cummulativeSum(arr):
