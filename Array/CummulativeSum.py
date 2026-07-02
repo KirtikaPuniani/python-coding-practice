@@ -1,4 +1,7 @@
-#Find cummulative sum of a list
+#Find cumulative sum of a list
+
+#the task is to find the cumulative sum (also known as the running total) where each element in the output represents the sum of all elements up to that 
+#position in the original list.
 
 arr = [2,3,5,7,9,18,45]
 
