@@ -18,4 +18,11 @@ result = [list(islice(a, n)) for _ in range((len(arr) + n-1) //n)]
 print(result)
 
 
+#Using zip_longest() from itertools
+from itertools import zip_longest
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+n = 3
+result = [list(filter(None, group)) for group in zip_longest(*[iter(arr)]*n)]
+print(result)
+
 #Using a for loop
