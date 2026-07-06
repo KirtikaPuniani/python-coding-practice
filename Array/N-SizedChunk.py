@@ -25,4 +25,14 @@ n = 3
 result = [list(filter(None, group)) for group in zip_longest(*[iter(arr)]*n)]
 print(result)
 
+
+#Using Slicing
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+n = 3
+result = []
+for i in range(0, len(arr), n):
+    result.append(arr[i:i+n])
+print(result)
+
+
 #Using a for loop
