@@ -36,3 +36,12 @@ print(result)
 
 
 #Using a for loop
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+n = 3
+result = []
+for i in range(0, len(arr), n):
+    chunk = []
+    for j in range(i, min(i+n, len(arr))):
+        chunk.append(arr[j])
+    result.append(chunk)
+print(result)
