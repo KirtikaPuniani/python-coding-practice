@@ -12,7 +12,11 @@ print(result)
 
 
 
+#Using numpy.argsort()
 
+import numpy as np
+list1 = ['a', 'c', 'b', 'd', 'e']
+list2 = [10, 40, 20, 30, 50]
 
-
-
+result = [list1[i] for i in np.argsort(list2)]
+print(result)
