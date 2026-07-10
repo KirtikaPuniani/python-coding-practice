@@ -22,3 +22,17 @@ b = [[7, 8, 9], [10, 11, 12]]
 result = [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]
 for r in result:
     print(r)
+
+
+
+#Using nested loops
+
+a = [[1, 2, 3], [4, 5, 6]]
+b = [[7, 8, 9], [10, 11, 12]]
+
+result = [[0,0,0],[0,0,0]]
+for i in range(len(a)):
+    for j in range(len(a[0])):
+        result[i][j] = a[i][j] + b[i][j]
+for r in result:
+    print(r)
