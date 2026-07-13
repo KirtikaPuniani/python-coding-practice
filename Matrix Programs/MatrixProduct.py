@@ -10,3 +10,31 @@ print(result)
 # Explanation: 
 # b = [ele for sub in a for ele in sub] flattens the 2D list into a one-dimensional list.
 # np.prod(b) multiplies all elements and returns the total product.
+
+
+
+#Using math.prod()
+import math
+matrix = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]]
+result = [ele for sub in matrix for ele in sub]
+result = math.prod(result)        #math.prod() automatically multiplies all elements in b.
+print(result)
+
+
+
+#Using operator.mul with reduce
+from functools import reduce
+import operator
+matrix = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]]
+result = [ele for sub in matrix for ele in sub]
+result = reduce(operator.mul, result)  # reduce() applies operator.mul() to all elements in result
+print(result)
+
+
+
+#Using functools.reduce
+from functools import reduce
+matrix = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]]
+result = [ele for sub in matrix for ele in sub]
+result = reduce(lambda x, y: x * y, result)  # reduce() applies the lambda function to all elements in result
+print(result)
