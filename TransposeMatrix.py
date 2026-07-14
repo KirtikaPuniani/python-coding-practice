@@ -13,6 +13,7 @@ print(transposed)
 #example we unzip our array using * and then zip it to get the transpose.
 
 matrix = [(1,2,3), (4,5,6), 
-          (7,8,9), (10,11,12)]
-transposed = list(zip(*matrix))
-print(transposed)
+                    (7,8,9), (10,11,12)]
+transposed = zip(*matrix)
+for row in transposed:
+    print(row)
