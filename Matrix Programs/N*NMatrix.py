@@ -40,9 +40,3 @@ for i in range(n):
         count += 1
     m.append(row)
 print(m)
-
-
-
-
-
-
