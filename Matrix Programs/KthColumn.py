@@ -1,4 +1,4 @@
-#Extract the Kth column from a matrix
+#Extract the Kth column from a matrix 
 
 #Using numpy
 import numpy as np
