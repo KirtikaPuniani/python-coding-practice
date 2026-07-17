@@ -6,8 +6,8 @@
 
 #Using pandas Dataframe and apply
 import pandas as pd
-matrix1 = [['I', 'am', 'a', 'intelligent', 'person'], ['and', 'I', 'can', 'do', 'anything'], ['I', 'put', 'my', 'mind', 'to']]
-df = pd.DataFrame(matrix1)
+matrix = [['I', 'am', 'a', 'intelligent', 'person'], ['and', 'I', 'can', 'do', 'anything'], ['I', 'put', 'my', 'mind', 'to']]
+df = pd.DataFrame(matrix)
 result = df.fillna('').apply(''.join)
 print(result)
 
@@ -16,3 +16,15 @@ print(result)
 # fillna(''): Replaces missing values in shorter rows with empty strings.
 # apply(''.join): Joins strings in each column efficiently.
 # list(res): Converts the resulting concatenated column data back into a list.
+
+
+
+
+#Using numpy transpose and ravel
+import numpy as np
+matrix = [['I', 'am', 'a', 'intelligent', 'person'], ['and', 'I', 'can', 'do', 'anything'], ['I', 'put', 'my', 'mind', 'to']]
+m = max(len(x) for x in matrix)  # Find the maximum row length
+p = [x + [''] * (m - len(x)) for x in matrix] # Pad shorter rows with empty strings
+array = np.array(p).T
+result = [''.join(row) for row in array]
+print(str(result))
