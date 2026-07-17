@@ -28,3 +28,9 @@ p = [x + [''] * (m - len(x)) for x in matrix] # Pad shorter rows with empty stri
 array = np.array(p).T
 result = [''.join(row) for row in array]
 print(str(result))
+
+# Explanation:
+# max(len(x) for x in lst): finds the maximum sublist length (2).
+# [x + [''] * (m - len(x)) for x in lst]: pads shorter lists with ' ' [['Gfg','good'], ['is','for'], ['Best','']].
+# np.array(p).T: converts to NumPy array and transposes: [['Gfg','is','Best'], ['good','for','']].
+# [''.join(row) for r in arr]: joins each transposed row: ['GfgisBest','goodfor'].
