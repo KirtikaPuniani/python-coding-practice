@@ -20,6 +20,8 @@ print(result)
 
 
 
+
+
 #Using numpy transpose and ravel
 import numpy as np
 matrix = [['I', 'am', 'a', 'intelligent', 'person'], ['and', 'I', 'can', 'do', 'anything'], ['I', 'put', 'my', 'mind', 'to']]
@@ -37,11 +39,14 @@ print(str(result))
 
 
 
+
+
 #Using join + list comprehension + zip_longest
 from itertools import zip_longest
 matrix = [['I', 'am', 'a', 'intelligent', 'person'], ['and', 'I', 'can', 'do', 'anything'], ['I', 'put', 'my', 'mind', 'to']]
 result = ["".join(col) for col in zip_longest(*matrix, fillvalue='')]
 print(str(result))
+
 # Explanation:
 # zip_longest(*t1, fillvalue=""): transposes the matrix and fills missing elements with "".
 # join(col): concatenates strings column-wise.
