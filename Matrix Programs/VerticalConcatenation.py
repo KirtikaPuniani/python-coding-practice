@@ -34,3 +34,11 @@ print(str(result))
 # [x + [''] * (m - len(x)) for x in lst]: pads shorter lists with ' ' [['Gfg','good'], ['is','for'], ['Best','']].
 # np.array(p).T: converts to NumPy array and transposes: [['Gfg','is','Best'], ['good','for','']].
 # [''.join(row) for r in arr]: joins each transposed row: ['GfgisBest','goodfor'].
+
+
+
+#Using join + list comprehension + zip_longest
+from itertools import zip_longest
+matrix = [['I', 'am', 'a', 'intelligent', 'person'], ['and', 'I', 'can', 'do', 'anything'], ['I', 'put', 'my', 'mind', 'to']]
+result = ["".join(col) for col in zip_longest(*matrix, fillvalue='')]
+print(str(result))
