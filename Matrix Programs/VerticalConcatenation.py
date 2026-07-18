@@ -51,3 +51,29 @@ print(str(result))
 # zip_longest(*t1, fillvalue=""): transposes the matrix and fills missing elements with "".
 # join(col): concatenates strings column-wise.
 # list comprehension builds the final result.
+
+
+
+
+#Using loop
+matrix = [['I', 'am', 'a', 'intelligent', 'person'], ['and', 'I', 'can', 'do', 'anything'], ['I', 'put', 'my', 'mind', 'to']]
+def vertical_concatenation(matrix):
+    result = []
+    n = 0
+    while n < max(len(sub) for sub in matrix):
+        temp = ''
+        for sub in matrix:
+            try:
+                temp += sub[n]
+            except IndexError:
+                pass
+        if temp:
+            result.append(temp)
+        n += 1
+    return result
+
+# Explanation:
+# Outer while loop iterates over column positions.
+# Inner for loop traverses each row to collect elements.
+# try-except ensures missing elements in shorter rows are skipped safely.
+# Each combined string is appended to res, forming the final vertically concatenated list.
