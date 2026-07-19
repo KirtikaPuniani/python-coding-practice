@@ -13,3 +13,9 @@ palindrome = string == string[::-1]
 
 print("Symmetrical" if symmetrical else "Not Symmetrical")
 print("Palindrome" if palindrome else "Not Palindrome") 
+
+# Explanation:
+# string[:half] slices the first half of the string.
+# string[half:] or string[half+1:] slices the second half depending on even/odd length.
+# string[::-1] reverses the string for the palindrome check.
+# Comparisons return True/False and determine the output.
