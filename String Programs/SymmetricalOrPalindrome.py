@@ -48,8 +48,3 @@ for i in range(half):
             break
 print("Symmetrical" if symmetrical else "Not Symmetrical")
 print("Palindrome" if palindrome else "Not Palindrome") 
-
-
-
-
-
