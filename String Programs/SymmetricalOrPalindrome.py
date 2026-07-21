@@ -48,3 +48,22 @@ for i in range(half):
             break
 print("Symmetrical" if symmetrical else "Not Symmetrical")
 print("Palindrome" if palindrome else "Not Palindrome") 
+
+
+
+
+
+
+
+#Using all with genrator expression
+#This method uses generator inside all() to check palindrome. Symmetry is checked by slicing. Efficient because it stops at first mismatch and uses
+#constant etra memory.
+
+string = 'amaama'
+half = len(string) // 2
+#palindrom
+palindrome = all(string[i] == string[-i-1] for i in range(half))
+#symmetry
+symmetry = string[:half] == string[half:] if len(string) % 2 == 0 else string[:half] == string[half+1:]
+print("Symmetrical" if symmetrical else "Not Symmetrical")
+print("Palindrome" if palindrome else "Not Palindrome") 
