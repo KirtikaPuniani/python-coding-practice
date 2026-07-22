@@ -11,3 +11,9 @@ print(result)
 #[::-1] reverses the list of words
 #''.join() concatinates the reversed words into a single string separated by spaces
 
+
+
+
+
+
+
