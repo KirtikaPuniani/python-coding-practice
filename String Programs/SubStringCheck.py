@@ -28,3 +28,14 @@ if op.contains(string, string1):
     print("Yes")
 else:
     print("No")
+    
+    
+    
+
+#Using find
+string = 'I am not able to understand my emotions and work together today'
+string1 = 'nothing'
+if string.find(string1) != -1:
+    print("yes")
+else:
+    print("no")
