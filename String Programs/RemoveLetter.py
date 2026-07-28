@@ -20,3 +20,10 @@ string = 'hello world'
 string = re.sub("[aeiou]", "xx", string)     
 #re.sub() removes all vowels. The pattern [aeiou] matches any vowel, and "" replaces them with nothing or anything specified within string.
 print(string)
+
+
+
+#Using list comprehension
+string = 'hello world'
+string = ''.join([c for c in string if c != 'l'])     #generates a list of characters in s but excludes "o". join() combines the list back into string
+print(string)
