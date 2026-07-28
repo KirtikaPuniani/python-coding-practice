@@ -6,3 +6,14 @@
 
 
 #using in
+#the in operator inpython checks if one string occurs within another. It evaluates to True if string is present in the main string otherwise False.
+string = 'I am not able to understand my emotions and work together today'
+if "for" in string:
+    print("Substring found")
+else:
+    print("Substring not found")
+    
+if "able" in string:
+    print("Substring found")
+else:
+    print("Substring not found")
