@@ -17,3 +17,14 @@ if "able" in string:
     print("Substring found")
 else:
     print("Substring not found")
+    
+    
+    
+#Using operatoe.contains()
+import operator as op
+string = 'I am not able to understand my emotions and work together today'
+string1 = 'able'
+if op.contains(string, string1):
+    print("Yes")
+else:
+    print("No")
