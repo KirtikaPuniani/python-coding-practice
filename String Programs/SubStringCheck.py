@@ -39,3 +39,9 @@ if string.find(string1) != -1:
     print("yes")
 else:
     print("no")
+    
+    
+
+#using index()
+string = 'I am not able to understand my emotions and work together today'
+print(string.index("hello"))
