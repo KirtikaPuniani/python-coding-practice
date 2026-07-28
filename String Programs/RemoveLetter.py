@@ -12,3 +12,11 @@ print(string)      #and replacement creates a new string and the original string
 string = "hello world"
 string = "".join(filter(lambda c: c != "o", string))  #filter checks evry charac ter in string and removes 'o' and join merges the remaining char into single string
 print(string)
+
+
+#Using Regular Expressions
+import re
+string = 'hello world'
+string = re.sub("[aeiou]", "xx", string)     
+#re.sub() removes all vowels. The pattern [aeiou] matches any vowel, and "" replaces them with nothing or anything specified within string.
+print(string)
