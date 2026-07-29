@@ -7,3 +7,8 @@ from collections import Counter
 string = 'hello how is everyone this fine morning'
 result = Counter(string.split())
 print(result)
+
+
+
+
+
