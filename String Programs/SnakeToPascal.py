@@ -25,3 +25,11 @@ import string
 string = 'hello_everyone_iam_happy'
 result = string.capwords(string.replace('_', '')).replace(' ', '')
 print(result)
+
+
+
+#using re.sub()
+import re
+string = 'hello_everyone_iam_happy'
+result = re.sub(r"(^|_)([a-z])", lambda match: match.group(2).upper(), string)
+print(result)
