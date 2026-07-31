@@ -12,6 +12,16 @@ print(result)
 #using dict.get() with a fpr loop
 string = 'hello hello everyone'
 result = {}
-for word in string.split():
-    result[word] = result.get(word, 0) + 1
+for word in string.split():     #iterates through each word
+    result[word] = result.get(word, 0) + 1    #freq.get() fetches the word's count. the count is incremented by 1 for every occurence
 print(result)
+
+
+
+#Using defaultdict(int) from collections
+from collections import defaultdict
+string = 'hello hello everyone'
+result = defaultdict(int)
+for word in string.split():
+    result[word] += 1
+print(dict(result))
