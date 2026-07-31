@@ -14,5 +14,14 @@ print(result)
 
 #Using str.title() and replace()
 string = 'hello_everyone_iam_happy'
-result = string.replace("_", " ").title().replace(" ", "")
+result = string.replace("_", " ").title().replace(" ", "")     #replace("_", " ") handles the conversion of inderscores to spaces.
+#title() ensures thaty the first letter of each word is capitalized. replace() removes any spaces ensuring the result is in pascal case.
+print(result)
+
+
+
+#using string.capwords()
+import string
+string = 'hello_everyone_iam_happy'
+result = string.capwords(string.replace('_', '')).replace(' ', '')
 print(result)
