@@ -6,5 +6,13 @@
 
 #Using split and capitalize
 string = 'hello_everyone_iam_happy'
-result = ''.join(word.capitalize() for word in string.split('_'))
+result = ''.join(word.capitalize() for word in string.split('_'))   
+#split('_') splits the string into individual words at each underscore. Join() joins the list of words without any separator.
+print(result)
+
+
+
+#Using str.title() and replace()
+string = 'hello_everyone_iam_happy'
+result = string.replace("_", " ").title().replace(" ", "")
 print(result)
