@@ -25,3 +25,14 @@ result = defaultdict(int)         #automatically starts each new key with 0
 for word in string.split():
     result[word] += 1            #for each word, increments the count
 print(dict(result))
+
+
+
+
+
+#Using list comprehension with collections.Counter
+#Counter allows you to efficiently count the frequecy of the elements by transforming the data and applying counter to generate frequency counts.
+from collections import Counter
+string = 'hello hello everyone'
+result = Counter([word for word in string.split()])     #creates a list of all words and copunter() then counts each word's occurence
+print(result)
