@@ -32,4 +32,7 @@ print(result)
 import re
 string = 'hello_everyone_iam_happy'
 result = re.sub(r"(^|_)([a-z])", lambda match: match.group(2).upper(), string)
+#(^|_) matches either the start of the string (^) or an underscore (_)
+#([a-z]) matches any lowercase letter (a-z) following the start of the string s or an underscore
+#lambda match: match.group(2).upper() converts the matched lowercase letter (group 2) to uppercase
 print(result)
