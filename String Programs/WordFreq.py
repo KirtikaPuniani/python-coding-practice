@@ -21,7 +21,7 @@ print(result)
 #Using defaultdict(int) from collections
 from collections import defaultdict
 string = 'hello hello everyone'
-result = defaultdict(int)
+result = defaultdict(int)         #automatically starts each new key with 0
 for word in string.split():
-    result[word] += 1
+    result[word] += 1            #for each word, increments the count
 print(dict(result))
