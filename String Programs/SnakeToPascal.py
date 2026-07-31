@@ -5,3 +5,6 @@
 
 
 #Using split and capitalize
+string = 'hello_everyone_iam_happy'
+result = ''.join(word.capitalize() for word in string.split('_'))
+print(result)
