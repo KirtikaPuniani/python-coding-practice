@@ -15,9 +15,25 @@ else:
     print('Not Accepted')
     
     
+
+
+
 #Using all() function
 string = 'hello'
 if all(vowel in string.lower() for vowel in 'aeiou'):     #checks if all vowels are present using all() function
     print('Accepted')
 else:
     print('Not Accepted')
+    
+
+
+
+#using a loop
+string = 'education'
+vowels = 'aeiou'
+for vowel in vowels:
+    if vowel not in string.lower():     #checks if each vowel is present in the string
+        print('Not Accepted')
+        break
+else:
+    print('Accepted')
