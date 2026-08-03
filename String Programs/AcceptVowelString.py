@@ -13,3 +13,11 @@ if vowels.issubset(set(string.lower())):     #checks if all vowels are present
     print('Accepted')
 else:
     print('Not Accepted')
+    
+    
+#Using all() function
+string = 'hello'
+if all(vowel in string.lower() for vowel in 'aeiou'):     #checks if all vowels are present using all() function
+    print('Accepted')
+else:
+    print('Not Accepted')
