@@ -37,3 +37,17 @@ for vowel in vowels:
         break
 else:
     print('Accepted')
+    
+    
+    
+string = 'hello'
+vowels = 'aeiou'
+a = set()
+for char in string.lower():
+    if char in vowels:     #checks if the character is a vowel
+        a.add(char)     #adds the vowel to the set
+    if len(a) == 5:     #checks if all vowels are present
+        print('Accepted')
+        break
+else:
+    print('Not Accepted')
