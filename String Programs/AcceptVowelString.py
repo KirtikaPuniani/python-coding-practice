@@ -51,3 +51,14 @@ for char in string.lower():
         break
 else:
     print('Not Accepted')
+    
+
+
+
+#Using regular expressions
+import re
+string = 'education'
+if re.search(r'(?=.*a)(?=.*e)(?=.*i)(?=.*o)(?=.*u)', string.lower()):     #checks if all vowels are present using regex
+    print('Accepted')
+else:
+    print('Not Accepted')
