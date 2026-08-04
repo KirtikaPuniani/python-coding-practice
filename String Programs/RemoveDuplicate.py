@@ -35,7 +35,6 @@ print(result)
 
 
 
-
 #Using list comprehension with slicing
 string = 'hello everyone good morning'
 result = ''.join([char for i, char in enumerate(string) if char not in string[:i]])    #enumerate() gives index and character, and slicing checks if the character has appeared before
