@@ -28,3 +28,10 @@ for char in string:
 sorted_freq = sorted(char_count.items(), key=lambda x: x[1])     #sorts the characters by their frequency
 least_frequent_char = sorted_freq[0][0]     #gets the character with the least frequency
 print(least_frequent_char)
+
+
+
+#Using string.count() method
+string = 'hello everyone good morning'
+least_frequent_char = min(string, key = lambda char: string.count(char))     #finds the character with the minimum count using string.count()
+print(least_frequent_char)
