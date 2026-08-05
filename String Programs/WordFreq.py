@@ -36,3 +36,7 @@ from collections import Counter
 string = 'hello hello everyone'
 result = Counter([word for word in string.split()])     #creates a list of all words and copunter() then counts each word's occurence
 print(result)
+
+
+
+
