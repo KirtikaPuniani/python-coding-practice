@@ -29,3 +29,19 @@ for char in string:
     freq[char] =freq.get(char, 0) + 1
 max_char = max(freq, key = freq.get)     #finds the maximum frequency count
 print(max_char)
+
+
+
+#Using str.count()
+string = '''It's a pleasure to meet you. I am a software engineer and I love coding.'''
+max_char = ''
+max_count = 0
+for char in set(string):
+    string = string.replace(" ", "") 
+    count = string.count(char)
+    if count > max_count:
+        max_count = count
+        max_char = char
+print(max_char)
+
+
