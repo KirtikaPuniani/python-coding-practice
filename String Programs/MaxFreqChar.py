@@ -36,12 +36,10 @@ print(max_char)
 string = '''It's a pleasure to meet you. I am a software engineer and I love coding.'''
 max_char = ''
 max_count = 0
-for char in set(string):
+for char in set(string):         #set(string) avoids duplicate calculation of the same character and makes the code more efficient
     string = string.replace(" ", "") 
-    count = string.count(char)
-    if count > max_count:
+    count = string.count(char)     #counts each characters occurrence in the string
+    if count > max_count:         #loop updates max_count and max_char whenever a higher frequency is found
         max_count = count
         max_char = char
 print(max_char)
-
-
