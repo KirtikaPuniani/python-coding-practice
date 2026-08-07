@@ -13,6 +13,7 @@ print(most_freq_count)
 #Using set and counter
 from collections import Counter
 string = 'I am so pissed off with this assignment'
-string = string.replace(" ", "")
+string = string.replace(" ", "")        #strip spaces from the string which will not be possible if we use set() as it will consider space as a character and will give wrong output. Without 
+# this line, the output will be space as it is the most frequent character in the string.
 max_char = max(set(string), key = Counter(string).get)     #finds the maximum frequency count
 print(max_char)
