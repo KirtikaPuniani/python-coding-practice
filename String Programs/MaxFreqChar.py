@@ -17,3 +17,15 @@ string = string.replace(" ", "")        #strip spaces from the string which will
 # this line, the output will be space as it is the most frequent character in the string.
 max_char = max(set(string), key = Counter(string).get)     #finds the maximum frequency count
 print(max_char)
+
+
+
+#Using dict.get() with max()
+string = 'It is a beautiful day to save lives'
+string = string.replace(" ", "")        #strip spaces from the string which will not be possible if we use set() as it will consider space as a character and will give wrong output. Without 
+# this line, the output will be space as it is the most frequent character in the string
+freq = {}
+for char in string:
+    freq[char] =freq.get(char, 0) + 1
+max_char = max(freq, key = freq.get)     #finds the maximum frequency count
+print(max_char)
