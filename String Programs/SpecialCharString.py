@@ -1,4 +1,4 @@
-#Check if that string contains any special character. If any special character is found, don't accept the string.
+#Check if a string contains any special character. If any special character is found, don't accept the string.
 
 
 #Using regular expression
