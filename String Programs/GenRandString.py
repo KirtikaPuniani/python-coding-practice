@@ -25,3 +25,9 @@ while string != target:
     
 print(string)
 print(f"Target matched after {iterations} iterations")
+
+
+
+
+
+
