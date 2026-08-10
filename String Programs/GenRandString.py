@@ -25,3 +25,31 @@ while string != target:
     
 print(string)
 print(f"Target matched after {iterations} iterations")
+
+
+
+
+
+#Hill Climbing Algorithm
+import string
+import random
+char = string.ascii_letters + string.digits + '.,!?;:'
+target = 'Hello'
+
+a = ''.join(random.choice(char) for _ in range(len(target)))
+iterations = 0
+
+while a != target:
+    print(a)
+    b = list(a)
+    
+    for i in range(len(target)):
+        if b[i] != target[i]:
+            b[i] = random.choice(char)
+            if sum(x == y for x, y in zip(''.join(b), target)) < sum(x == y for x, y in zip(a, target)):
+                b[i] = a[i]
+    a = ''.join(b)
+    iterations += 1
+
+print(a)
+print(f"Target matched after {iterations} iterations")
