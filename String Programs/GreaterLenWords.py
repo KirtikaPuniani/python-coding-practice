@@ -18,6 +18,6 @@ def find_words(string, k):
 #Driver Code
 if __name__ == '__main__':
     string = 'Hello World Python Programming'
-    k = 4
+    k = 7
     words = find_words(string, k)
     print(f"Words greater than length {k}: {words}")
