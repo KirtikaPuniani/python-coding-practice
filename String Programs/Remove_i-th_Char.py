@@ -9,3 +9,11 @@ string = 'PythonProgramming'
 i = 6
 op = string[:i] + string[i+1:]
 print(op)
+
+
+
+#Using join() with list comprehension
+string = 'KirtikaPuniani'
+i = 6
+res = ''.join([string[j] for j in range(len(string)) if j != i])
+print(res)
