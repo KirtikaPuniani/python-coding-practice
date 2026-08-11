@@ -17,3 +17,11 @@ string = 'KirtikaPuniani'
 i = 6
 res = ''.join([string[j] for j in range(len(string)) if j != i])
 print(res)
+
+
+
+#Using replace() with slicing
+string = 'PestoPastaWithParmesan'
+i = 9
+result = string[:1] + string[i:].replace(string[i], '', 1)
+print(result)
