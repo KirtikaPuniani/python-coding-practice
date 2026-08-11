@@ -32,3 +32,12 @@ if __name__ == '__main__':
 string = 'Hello World Python Programming'
 k = 10
 print([word for word in string.split() if len(word) > k])
+
+
+
+#Using lambda function
+string = 'Hello i am Kirtika Puniani'
+k = 5
+a = string.split()
+b = list(filter(lambda x: (len(x) > k), a))
+print(b)
