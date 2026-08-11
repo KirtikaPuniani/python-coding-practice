@@ -24,3 +24,11 @@ if __name__ == '__main__':
     
 #Time Complexity: O(n), where n is the number of words in the string.
 #Space Complexity: O(n), where n is the number of words in the string.
+
+
+
+
+#Using list comprehension
+string = 'Hello World Python Programming'
+k = 10
+print([word for word in string.split() if len(word) > k])
