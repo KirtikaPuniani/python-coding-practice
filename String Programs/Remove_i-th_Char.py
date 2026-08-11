@@ -23,5 +23,5 @@ print(res)
 #Using replace() with slicing
 string = 'PestoPastaWithParmesan'
 i = 9
-result = string[:1] + string[i:].replace(string[i], '', 1)
+result = string[:i] + string[i:].replace(string[i], '', 1)
 print(result)
