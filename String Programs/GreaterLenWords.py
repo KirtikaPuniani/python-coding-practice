@@ -21,3 +21,6 @@ if __name__ == '__main__':
     k = 7
     words = find_words(string, k)
     print(f"Words greater than length {k}: {words}")
+    
+#Time Complexity: O(n), where n is the number of words in the string.
+#Space Complexity: O(n), where n is the number of words in the string.
