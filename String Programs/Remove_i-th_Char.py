@@ -23,7 +23,7 @@ print(res)
 #Using replace() with slicing
 string = 'PestoPastaWithParmesan'
 i = 9
-result = string[:i] + string[i:].replace(string[i], '', 1)
+result = string[:i] + string[i:].replace(string[i], '', 1)     #removes i-th char by joining the part before i with the remaining substring after deleting s[i]
 print(result)
 
 
