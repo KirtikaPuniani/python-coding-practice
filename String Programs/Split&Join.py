@@ -2,3 +2,8 @@
 #Eg: 'How are you?' split by spaces and joined with hyphens becomes 'How-are-you?'
 
 
+#Using split and join
+string = 'Hello, How are you?'
+s = string.split()
+result = '-'.join(s)
+print(result)
