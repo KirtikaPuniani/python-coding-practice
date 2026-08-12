@@ -21,3 +21,12 @@ s = re.split(r'\s+', string)     #split by spaces
 a = '-'.join(s)    #join with a hyphen
 # print(s)
 print(a)
+
+
+
+
+#Using list comprehension with split
+string = 'Hello, How are you?'
+s = [word for word in string.split()]
+a = '-'.join(s)
+print(a)
