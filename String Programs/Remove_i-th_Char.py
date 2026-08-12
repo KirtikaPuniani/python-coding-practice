@@ -7,7 +7,7 @@
 #Using string slicing
 string = 'PythonProgramming'
 i = 6
-op = string[:i] + string[i+1:]
+op = string[:i] + string[i+1:]    #s[:i] extracts chars from the start up to index i(but not excluding) and s[i+1:] extracts chars from index i+1 to the end
 print(op)
 
 
@@ -24,4 +24,14 @@ print(res)
 string = 'PestoPastaWithParmesan'
 i = 9
 result = string[:i] + string[i:].replace(string[i], '', 1)
+print(result)
+
+
+#USing a for loop
+string = 'IAmIronMan'
+i = 1
+result = ''
+for x in range(len(string)):
+    if x != i:
+        result += string[x]
 print(result)
