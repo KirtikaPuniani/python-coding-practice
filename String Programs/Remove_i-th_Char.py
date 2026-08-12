@@ -27,11 +27,11 @@ result = string[:i] + string[i:].replace(string[i], '', 1)     #removes i-th cha
 print(result)
 
 
-#USing a for loop
+#Using a for loop
 string = 'IAmIronMan'
 i = 1
 result = ''
-for x in range(len(string)):
+for x in range(len(string)):      #for loop iterates through all indices skipping the i-th char
     if x != i:
-        result += string[x]
+        result += string[x]      #concatenates chars to res one by one
 print(result)
