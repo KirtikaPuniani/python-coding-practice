@@ -4,6 +4,6 @@
 
 #Using split and join
 string = 'Hello, How are you?'
-s = string.split()
-result = '-'.join(s)
+s = string.split()     #divides the string into a list of words, split by spaces by default
+result = '-'.join(s)     #resembles the list into a string with hyphens between the words
 print(result)
