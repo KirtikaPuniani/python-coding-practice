@@ -15,7 +15,7 @@ print(op)
 #Using join() with list comprehension
 string = 'KirtikaPuniani'
 i = 6
-res = ''.join([string[j] for j in range(len(string)) if j != i])
+res = ''.join([string[j] for j in range(len(string)) if j != i])      #for loop iterates through all indices and skips the i-th char and join converts the list of chars back into the string
 print(res)
 
 
