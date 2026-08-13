@@ -30,3 +30,10 @@ string = 'Hello, How are you?'
 s = [word for word in string.split()]
 a = '-'.join(s)
 print(a)
+
+
+
+
+
+
+
