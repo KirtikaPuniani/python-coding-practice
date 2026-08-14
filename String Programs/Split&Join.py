@@ -30,3 +30,17 @@ string = 'Hello, How are you?'
 s = [word for word in string.split()]
 a = '-'.join(s)
 print(a)
+
+
+
+
+#Using str.partition and str.replace
+string = 'Hello, How are you?'
+words, rem = [], a
+while rem:
+    head, _, rem = rem.partition(" ")
+    if head:
+        words.append(head)
+c = "-".join(words)
+# print(words)
+print(c)
