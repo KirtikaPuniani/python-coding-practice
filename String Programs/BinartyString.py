@@ -14,7 +14,7 @@ else:
     
 #Using set
 a = '1000111001101010101'
-if set(a).issubset({'0', '1'}):
+if set(a).issubset({'0', '1'}):    #set converts the string into a set of unique chars. issubset checks if all unique chars are either 0 or 1.
     print("Yes")
 else:
     print("No")
