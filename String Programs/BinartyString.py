@@ -9,3 +9,12 @@ if all(x in '01' for x in a):     #all creates a generator that iterates through
     print("Yes")
 else:
     print("No")
+    
+    
+    
+#Using set
+a = '1000111001101010101'
+if set(a).issubset({'0', '1'}):
+    print("Yes")
+else:
+    print("No")
