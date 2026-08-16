@@ -18,3 +18,13 @@ if set(a).issubset({'0', '1'}):    #set converts the string into a set of unique
     print("Yes")
 else:
     print("No")
+    
+    
+    
+#Using Regular Expression
+import re
+s = '10011000022211110000'
+if re.fullmatch('[01]+', s):
+    print("Yes")
+else:
+    print("No")
