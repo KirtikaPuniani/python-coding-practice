@@ -5,6 +5,7 @@
 #Using all
 a = '1010101110001010111000'
 if all(x in '01' for x in a):     #all creates a generator that iterates through each char in a. checks if each char belongs to the set {'0', '1'}
+    #short circuit evaluation- all stops immediately if a char fails the condition, making it fast for large strings
     print("Yes")
 else:
     print("No")
