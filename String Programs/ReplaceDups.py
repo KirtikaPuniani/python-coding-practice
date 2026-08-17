@@ -5,7 +5,7 @@
 
 #Using list comprehension and set
 s = 'Gfg is best. Gfg also has Classes now. Classes help understand better.'
-rep ={'Gfg': 'It', 'Classes': 'They'}
+rep = {'Gfg': 'It', 'Classes': 'They'}
 seen = set()
 result = [rep[word] if word in rep and word in seen else(seen.add(word) or word) for word in s.split()]
 s2 = ' '.join(result)
