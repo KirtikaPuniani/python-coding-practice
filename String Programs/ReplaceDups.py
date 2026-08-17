@@ -10,3 +10,21 @@ seen = set()
 result = [rep[word] if word in rep and word in seen else(seen.add(word) or word) for word in s.split()]
 s2 = ' '.join(result)
 print(s2)
+
+
+
+
+#Using regular expression
+import re
+s = 'Gfg is best. Gfg also has Classes now. Classes help understand better.'
+rep = {'Gfg': 'It', 'Classes': 'They'}
+pattern = r'\b(' + '|'.join(re.escape(k) for k in rep.keys()) + r')\b'
+seen = set()
+def repDup(m):
+    word = m.group(1)
+    if word in seen:
+        return rep[word]
+    seen.add(word)
+    return word
+result = re.sub(pattern, repDup, s)
+print(result)
