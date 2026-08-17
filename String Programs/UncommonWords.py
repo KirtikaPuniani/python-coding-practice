@@ -12,3 +12,14 @@ s2 = "Hi I am from London"
 count = Counter(s1.split()) + Counter(s2.split())
 result = [word for word in count if count[word] == 1]
 print(result)
+
+
+
+#Using get
+s1 = "Hello how are you"
+s2 = "Hello what are you doing"
+d = {}
+for word in (s1 + " " + s2).split():
+    d[word] = d.get(word, 0) + 1
+result = [word for word in d if d[word] == 1]
+print(result)
