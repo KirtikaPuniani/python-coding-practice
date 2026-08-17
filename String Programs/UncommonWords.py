@@ -33,3 +33,15 @@ set1 = set(s1.split())
 set2 = set(s2.split())
 result = list(set1 ^ set2)
 print(result)
+
+
+
+#Using for loop
+s1 = "Hi I am here"
+s2 = "Hi I am from London"
+words = (s1 + " " + s2).split()
+result = []
+for word in words:
+    if words.count(word) == 1:
+        result.append(word)
+print(result)
