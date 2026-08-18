@@ -31,3 +31,14 @@ print("URLs:", urls)
 # s.split(): function splits the string to words.
 # urlparse(word): function checks each word to see if it has a valid scheme (http/https) and domain.
 # URLs are added to url list using append() function.
+
+
+
+
+
+#Using urlextract
+from urlextract import URLExtract
+s = "My Profile: https://www.geeksforgeeks.org/404.html/ in the portal of https://www.geeksforgeeks.org/"
+extractor = URLExtract()
+urls = extractor.find_urls()
+print("URLs:", urls)
