@@ -8,5 +8,5 @@
 s = 'apple banana oranges'
 words_to_replace = ['apple', 'banana']
 k = 'kiwi'
-result = ' '.join([k if word in words_to_replace else word for word in s.split()])
+result = ' '.join([k if word in words_to_replace else word for word in s.split()])        #checks each word; if it's in words_to_replace, it replaces it with k
 print(result)
