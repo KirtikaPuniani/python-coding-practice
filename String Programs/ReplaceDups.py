@@ -44,3 +44,12 @@ for i, word in enumerate(words):
             seen.add(word)
 result = ' '.join(words)
 print(result)
+
+
+
+#Using keys + index + list comprehension
+s = 'Gfg is best. Gfg also has Classes now. Classes help understand better.'
+rep = {'Gfg': 'It', 'Classes': 'They'}
+words = s.split()
+result = ' '.join([rep.get(word) if word in rep and words.index(word) != i else word for i, word in enumerate(words)])
+print(result)
