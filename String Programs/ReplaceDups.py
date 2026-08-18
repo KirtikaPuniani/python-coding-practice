@@ -53,3 +53,6 @@ rep = {'Gfg': 'It', 'Classes': 'They'}
 words = s.split()
 result = ' '.join([rep.get(word) if word in rep and words.index(word) != i else word for i, word in enumerate(words)])
 print(result)
+
+
+
