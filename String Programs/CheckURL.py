@@ -4,3 +4,8 @@
 #    Output: ['https://www.geeksforgeeks.org/404.html/', 'https://www.geeksforgeeks.org/']
 
 
+#Using re.findall()
+import re
+s =  "My Profile: https://www.geeksforgeeks.org/404.html/ in the portal of https://www.geeksforgeeks.org/"
+pattern = r'https?://\S+|www\.\S+'
+print("URLs:", re.findall(pattern, s))
