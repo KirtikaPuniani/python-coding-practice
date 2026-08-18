@@ -1,4 +1,4 @@
-#Replace multiple words with k 
+#Replace multiple words with k
 #replace all occurences of specific words in a string a single replcaement word k.
 #eg: text = 'apple banana oranges'     words_to_replace = ['apple', 'banana']
 #    O/P = 'k k oranges'
