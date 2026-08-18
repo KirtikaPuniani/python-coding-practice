@@ -28,3 +28,19 @@ def repDup(m):
     return word
 result = re.sub(pattern, repDup, s)
 print(result)
+
+
+
+#Using split + enumerate + loop
+s = 'Gfg is best. Gfg also has Classes now. Classes help understand better.'
+rep = {'Gfg': 'It', 'Classes': 'They'}
+words = s.split()
+seen = set()
+for i, word in enumerate(words):
+    if word in rep:
+        if word in seen:
+            words[i] = rep[word]
+        else:
+            seen.add(word)
+result = ' '.join(words)
+print(result)
