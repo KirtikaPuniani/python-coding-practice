@@ -1,0 +1,12 @@
+#Replace multiple words with k 
+#replace all occurences of specific words in a string a single replcaement word k.
+#eg: text = 'apple banana oranges'     words_to_replace = ['apple', 'banana']
+#    O/P = 'k k oranges'
+
+
+#Using list comprehension
+s = 'apple banana oranges'
+words_to_replace = ['apple', 'banana']
+k = 'kiwi'
+result = ' '.join([k if word in words_to_replace else word for word in s.split()])
+print(result)
