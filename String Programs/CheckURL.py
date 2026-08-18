@@ -9,3 +9,7 @@ import re
 s =  "My Profile: https://www.geeksforgeeks.org/404.html/ in the portal of https://www.geeksforgeeks.org/"
 pattern = r'https?://\S+|www\.\S+'
 print("URLs:", re.findall(pattern, s))
+# Explanation:
+# https?://\S+ matches URLs starting with http:// or https://.
+# www\.\S+ matches URLs starting with www.
+# findall(): returns all matches in a list.
