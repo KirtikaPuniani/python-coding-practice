@@ -27,3 +27,7 @@ for word in s1:
     if parsed.scheme and parsed.netloc:
         urls.append(word)
 print("URLs:", urls)
+# Explanation:
+# s.split(): function splits the string to words.
+# urlparse(word): function checks each word to see if it has a valid scheme (http/https) and domain.
+# URLs are added to url list using append() function.
