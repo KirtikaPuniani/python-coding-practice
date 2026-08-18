@@ -20,3 +20,14 @@ words_to_replace = ['apple', 'oranges']
 k = 'strawberry'
 result = re.sub("|".join(sorted(words_to_replace, key = len, reverse = True)), k, s)
 print(result)
+
+
+
+#Using for loop and replace
+import re
+s = 'apple banana oranges'
+words_to_replace = ['banana', 'oranges']
+k = 'melon'
+for word in words_to_replace:
+    s = s.replace(word, k)
+print(s)
