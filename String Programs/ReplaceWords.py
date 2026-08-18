@@ -31,3 +31,13 @@ k = 'melon'
 for word in words_to_replace:
     s = s.replace(word, k)
 print(s)
+
+
+
+#Using lambda and reduce
+from functools import reduce
+s = 'apple banana oranges'
+words_to_replace = ['apple', 'oranges']
+k = 'mango'
+result = reduce(lambda s, w: s.replace(w, k), words_to_replace, s)
+print(result)
