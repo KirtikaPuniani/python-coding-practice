@@ -5,7 +5,7 @@
 
 #Using exec()
 #exec() function allows is to execute dynamically generated python code stored in a string
-code = "x = 5\ny = 10\nprint(x + y)"      
+code = "x = 5\ny = 10\nprint(x + y)"
 exec(code)      #executes the string code as python code
 #variables x and y are creeated, and their sum is printed
 
@@ -15,3 +15,11 @@ exec(code)      #executes the string code as python code
 code = '5+10+16'
 result = eval(code)
 print(result)
+
+
+
+#Using compile with exec or eval
+#compile converts a string into a code object, which can then be executed multiple times using exec or eval. Useful when the same code is run repetatively
+code = "x = 5\ny = 10\nprint(x + y)"
+result = compile(code, '<string>', 'exec')
+exec(result)
