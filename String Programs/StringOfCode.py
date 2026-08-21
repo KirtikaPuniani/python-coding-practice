@@ -5,5 +5,13 @@
 
 #Using exec()
 #exec() function allows is to execute dynamically generated python code stored in a string
-code = "x = 5\ny = 10\nprint(x + y)"
-exec(code)
+code = "x = 5\ny = 10\nprint(x + y)"      
+exec(code)      #executes the string code as python code
+#variables x and y are creeated, and their sum is printed
+
+
+#Using evel
+#eval function can execute a single expression stored in a string and return its result. It is more limited compared to exec but can be useful for evaluating expressions.
+code = '5+10+16'
+result = eval(code)
+print(result)
