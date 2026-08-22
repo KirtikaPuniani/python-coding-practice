@@ -1,0 +1,1 @@
+#Check if a string can become empty by recursive deletion using slicing
