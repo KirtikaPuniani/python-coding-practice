@@ -23,3 +23,12 @@ print(result)
 code = "x = 5\ny = 10\nprint(x + y)"
 result = compile(code, '<string>', 'exec')
 exec(result)
+
+
+
+
+#Using subprocess module
+#If we want to execute the code in a separate process, we can use the subprocess module. This is more suitable for executing standalone scripts or commands.
+import subprocess
+code = "print(5+10+19+23)"
+subprocess.run(['python3', '-c', code])
