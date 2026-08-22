@@ -8,7 +8,7 @@
 #Using string slicing
 s = "HelloGoodMorningHowIsItGoing"
 d = 2
-left = s[d:] + s[:d]
-right = s[-d:] + s[:-d]
+left = s[d:] + s[:d]        #for left rotation take the substring from index d to end (s[d:]) and add the first d chars (s[:d])
+right = s[-d:] + s[:-d]         #for right rotation take the substring from index d to end (s[-d:]) and add the first d chars (s[:-d])
 print("left rotation:", left)
 print("right rotation:", right)
