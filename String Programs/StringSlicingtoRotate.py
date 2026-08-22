@@ -3,3 +3,12 @@
 #Input: "GeeksforGeeks", d=2
 # Output: Left Rotation: "eksforGeeksGe" 
 #         Right Rotation:  "ksGeeksforGee"
+
+
+#Using string slicing
+s = "HelloGoodMorningHowIsItGoing"
+d = 2
+left = s[d:] + s[:d]
+right = s[-d:] + s[:-d]
+print("left rotation:", left)
+print("right rotation:", right)
