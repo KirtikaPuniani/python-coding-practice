@@ -56,16 +56,16 @@ n = len(s)
 
 #Left Rotation
 left = ""
-for i in range(d, n):
+for i in range(d, n):       #loops from index d --> end, adding all remaining chars
     left += s[i]
-for i in range(d):
+for i in range(d):         #appends the first d chars to complete the left rotation
     left += s[i]
 
 #Right Rotation
 right = ""
-for i in range(n-d, n):
+for i in range(n-d, n):     #adds the last d chars forst for right rotation
     right += s[i]
-for i in range(n-1):
+for i in range(n-d):       #appends the rest of the chars finishing teh right rotation
     right += s[i]
 
 print("Left Rotation:", left)
