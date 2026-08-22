@@ -12,3 +12,16 @@ left = s[d:] + s[:d]        #for left rotation take the substring from index d t
 right = s[-d:] + s[:-d]         #for right rotation take the substring from index d to end (s[-d:]) and add the first d chars (s[:-d])
 print("left rotation:", left)
 print("right rotation:", right)
+
+
+
+#By extending the string
+#this method doubles the string (s+s) so all possible rotations appear inside it. then the rotated version is obtained by slicing the extended string at the correct position.
+s = "HelloGoodMorningHowIsItGoing"
+d = 2
+ext = s+s
+n = len(s)
+left = ext[d: d+n]
+right = ext[n-d: 2*n - d]
+print("Left Rotation:", left)
+print("Right Rotation:", right)
