@@ -13,3 +13,16 @@
 # "aaaaaa" → remove "aa" → "aaaa"  
 # "aaaa"   → remove "aa" → "aa"  
 # "aa"     → remove "aa" → ""  
+
+
+
+#While loop with slicing
+s = 'IamKirtikaIamHappyIamContentIamEnoughIamSupportive'
+sub = 'Iam'
+while True:
+    ind = s.find(sub)
+    if ind == -1:
+        break
+    s = s[:ind] + s[ind + len(sub):]
+result = (s == "")
+print(result)
