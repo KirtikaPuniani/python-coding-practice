@@ -20,9 +20,9 @@
 s = 'IamKirtikaIamHappyIamContentIamEnoughIamSupportive'
 sub = 'Iam'
 while True:
-    ind = s.find(sub)
-    if ind == -1:
+    ind = s.find(sub)     #searches for the substring sub inside s and returns it starting order
+    if ind == -1:       #the substring is not found anymore so the loop stops
         break
-    s = s[:ind] + s[ind + len(sub):]
-result = (s == "")
+    s = s[:ind] + s[ind + len(sub):]             #removes the found substring by keeping the part before it and after it
+result = (s == "")            #Checks whether the final strig is empty
 print(result)
