@@ -34,9 +34,9 @@ print(result)
 #recursive deletion using slicing means removing a substring from a string again and again by cutting it out using slicing (s[:]). The process keeps calling itself until either the string 
 # becomes empty or no more deletions are possible
 def recursiveDeletion(s, sub):
-    if not s:
+    if not s:        #if the string is empty, return True
         return True
-    ind = s.find(sub)
+    ind = s.find(sub)        #find the first occurence of the substring
     
     if ind != -1:
         s1 = s[:ind] + s[ind + len(sub):]
