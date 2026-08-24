@@ -54,15 +54,28 @@ print(result)
 #Using replace() recursively
 #this method removes the substring using replace() inside a recursive function. each recursive call removes the substring again and again until either the string becomes empty or no more 
 # removals are possible
-def replaceRecursive(s, sub):
-    if not s:
+def replaceRecursive(s, sub):           #defines a recursive function that keeps removing the substring
+    if not s:           #if the string becomes rmpty, return True   
         return True
-    s1 = s.replace(sub, "")
+    s1 = s.replace(sub, "")        #removes all occurences of sub from s and stores the updated string in s1
     
-    if s1 == s:
-        return False
+    if s1 == s:      #checks if nothing was removes
+        return False      #if true: substring no longer exists return False
     return replaceRecursive(s1, sub)
 s = 'IamKirtikaIamHappyIamContentIamEnoughIamSupportive'
 sub = 'Iam'
 result = replaceRecursive(s, sub)
 print(result)
+
+
+
+
+#Iterative replace() loop
+#an iterative replace() loop repeatedly calls replace() inside a loop to update a string step by step until all desired changes are applied
+s = 'IamKirtikaIamHappyIamContentIamEnoughIamSupportive'
+sub = 'Iam'
+previous = None
+while s != previous:
+    previous = s
+    s = s.replace(sub, "")
+print(s == " ")
