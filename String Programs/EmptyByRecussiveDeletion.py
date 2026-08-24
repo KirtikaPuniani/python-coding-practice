@@ -47,3 +47,22 @@ sub = 'Iam'
 
 result = recursiveDeletion(s, sub)
 print(result)
+
+
+
+
+#Using replace() recursively
+#this method removes the substring using replace() inside a recursive function. each recursive call removes the substring again and again until either the string becomes empty or no more 
+# removals are possible
+def replaceRecursive(s, sub):
+    if not s:
+        return True
+    s1 = s.replace(sub, "")
+    
+    if s1 == s:
+        return False
+    return replaceRecursive(s1, sub)
+s = 
+sub = 'Iam'
+result = replaceRecursive(s, sub)
+print(result)
