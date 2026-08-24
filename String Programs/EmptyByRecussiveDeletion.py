@@ -62,7 +62,7 @@ def replaceRecursive(s, sub):
     if s1 == s:
         return False
     return replaceRecursive(s1, sub)
-s = 
+s = 'IamKirtikaIamHappyIamContentIamEnoughIamSupportive'
 sub = 'Iam'
 result = replaceRecursive(s, sub)
 print(result)
