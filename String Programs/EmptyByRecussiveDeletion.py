@@ -39,9 +39,9 @@ def recursiveDeletion(s, sub):
     ind = s.find(sub)        #find the first occurence of the substring
     
     if ind != -1:
-        s1 = s[:ind] + s[ind + len(sub):]
-        return recursiveDeletion(s1, sub)
-    return False
+        s1 = s[:ind] + s[ind + len(sub):]         #if found - remove it using slicing: s[:ind] + s[ind + len(sub):]
+        return recursiveDeletion(s1, sub)       #call function again with the updates string
+    return False           #if not found- return false because the string can't be reduced further
 s = 'IamKirtikaIamHappyIamContentIamEnoughIamSupportive'
 sub = 'Iam'
 
