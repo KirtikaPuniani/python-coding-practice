@@ -74,8 +74,8 @@ print(result)
 #an iterative replace() loop repeatedly calls replace() inside a loop to update a string step by step until all desired changes are applied
 s = 'IamKirtikaIamHappyIamContentIamEnoughIamSupportive'
 sub = 'Iam'
-previous = None
-while s != previous:
-    previous = s
-    s = s.replace(sub, "")
+previous = None      #tracks previus state to detect changes
+while s != previous:    #loop until 's' stops changing
+    previous = s      #save current state before replacement
+    s = s.replace(sub, "")      #remove all instances of 'sub'
 print(s == " ")
