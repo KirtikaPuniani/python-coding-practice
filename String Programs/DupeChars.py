@@ -24,3 +24,15 @@ for i, count in d.items():     #first loop counts how many times each character 
     if count > 1:       #the second loop adds chars with count > 1 to result
         result.append(i)
 print(result)
+
+
+
+
+#Using defaultdict from Collections
+from collections import defaultdict
+string = 'IamKirtikaPuniani'
+d = defaultdict(int)
+for i in string:
+    d[i] += 1
+result = [i for i in d if d[i] > 1]
+print(result)
