@@ -11,3 +11,16 @@ string = 'IamKirtikaPuniani'
 d = Counter(string)       #counts each char and stores as {char: count}
 result = [i for i, count in d.items() if count > 1]       #d.items() returns key-value pairs of char and frequency. [i for i, count in d.items() if count > 1] filters only duplicate chars
 print(result)
+
+
+
+#Using loop with dictionary
+string = 'IamKirtikaPuniani'
+d = {}
+result = []
+for i in string:
+    d[i] = d.get(i, 0) + 1
+for i, count in d.items():
+    if count > 1:
+        result.append(i)
+print(result)
