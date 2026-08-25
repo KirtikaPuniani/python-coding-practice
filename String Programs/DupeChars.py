@@ -31,8 +31,8 @@ print(result)
 #Using defaultdict from Collections
 from collections import defaultdict
 string = 'IamKirtikaPuniani'
-d = defaultdict(int)
-for i in string:
+d = defaultdict(int)       #automactically initialises missing keys with 0
+for i in string:      #loop increments count for each character
     d[i] += 1
-result = [i for i in d if d[i] > 1]
+result = [i for i in d if d[i] > 1]      #A list comprehension collects duplicates
 print(result)
