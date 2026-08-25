@@ -20,7 +20,7 @@ d = {}
 result = []
 for i in string:
     d[i] = d.get(i, 0) + 1    #d.get(i, 0) returns current count(default is 0) if key doesn't exist
-for i, count in d.items():
-    if count > 1:
+for i, count in d.items():     #first loop counts how many times each character appears
+    if count > 1:       #the second loop adds chars with count > 1 to result
         result.append(i)
 print(result)
