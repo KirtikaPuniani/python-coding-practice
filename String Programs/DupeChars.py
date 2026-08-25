@@ -19,7 +19,7 @@ string = 'IamKirtikaPuniani'
 d = {}
 result = []
 for i in string:
-    d[i] = d.get(i, 0) + 1
+    d[i] = d.get(i, 0) + 1    #d.get(i, 0) returns current count(default is 0) if key doesn't exist
 for i, count in d.items():
     if count > 1:
         result.append(i)
