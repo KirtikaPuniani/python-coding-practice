@@ -36,3 +36,15 @@ for i in string:      #loop increments count for each character
     d[i] += 1
 result = [i for i in d if d[i] > 1]      #A list comprehension collects duplicates
 print(result)
+
+
+
+
+
+#Using set() and count()
+string = 'IamKirtikaPuniani'
+result = []
+for i in set(string):      #removes duplicates for iteration and efficiency
+    if string.count(i) > 1:     #counts how many times i appears in string. If frequescy greater than 1, char is added to result
+        result.append(i)
+print(result)
