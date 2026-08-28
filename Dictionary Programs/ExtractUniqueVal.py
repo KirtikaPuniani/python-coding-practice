@@ -8,9 +8,10 @@ d = {'gfg' : [5,6,7,8],
      'best' : [6,12,10,8], 
      'for' : [1,2,5]}
 res = list(set(sum(d.values(), [])))      #data.values(): fetches all value lists.
+#sum(..., []): flattens nested lists by concatenation.
 print(res)
 
 
-sum(..., []): flattens nested lists by concatenation.
+
 set(): removes duplicate elements.
 list(): converts the set into a list.
