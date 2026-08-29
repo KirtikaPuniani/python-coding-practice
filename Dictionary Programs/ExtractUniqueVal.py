@@ -56,8 +56,8 @@ d = {'gfg' : [5,6,7,8],
      'best' : [6,12,10,8], 
      'for' : [1,2,5]}
 x, result = [], []
-for x in d.values():
-    x.extend(x)
+for value in d.values():
+    x.extend(value)
 for y in x:
     if y not in result:
         result.append(y)
