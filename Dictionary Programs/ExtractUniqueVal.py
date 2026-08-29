@@ -46,3 +46,20 @@ vals = [x for v in d.values() for x in v]         #flattens all values
 frequency = Counter(vals)        #counts frequency if each element
 result = sorted(list(frequency.keys()))       #frequency.keys() retreives unique elements
 print(result)
+
+
+
+
+#Using extend + if not in + sort
+d = {'gfg' : [5,6,7,8],
+     'is' : [10,11,7,5], 
+     'best' : [6,12,10,8], 
+     'for' : [1,2,5]}
+x, result = [], []
+for x in d.values():
+    x.extend(x)
+for y in x:
+    if y not in result:
+        result.append(y)
+result.sort()
+print(result)
