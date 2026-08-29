@@ -63,3 +63,18 @@ for y in x:
         result.append(y)
 result.sort()
 print(result)
+
+
+
+
+#Using operator.countOf() + extend + sort
+import operator as op
+
+x, result = [], []
+for value in d.values():
+    x.extend(value)
+for y in x:
+    if op.countOf(result, y) == 0:         #op.countOf checks element frequency in list
+        result.append(y)      #append only if count is 0
+result.sort()
+print(result)
