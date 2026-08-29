@@ -31,5 +31,5 @@ d = {'gfg' : [5,6,7,8],
      'is' : [10,11,7,5], 
      'best' : [6,12,10,8], 
      'for' : [1,2,5]}
-result = list(sorted(set(chain(*d.values()))))
+result = list(sorted(set(chain(*d.values()))))        #chin(*data.values()) flattens all value lists without creating intermediate lists
 print(result)
