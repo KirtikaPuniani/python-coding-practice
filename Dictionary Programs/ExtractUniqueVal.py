@@ -42,7 +42,7 @@ d = {'gfg' : [5,6,7,8],
      'is' : [10,11,7,5], 
      'best' : [6,12,10,8], 
      'for' : [1,2,5]}
-vals = [x for v in d.values() for x in v]
-frequency = Counter(vals)
-result = sorted(list(frequency.keys()))
+vals = [x for v in d.values() for x in v]         #flattens all values
+frequency = Counter(vals)        #counts frequency if each element
+result = sorted(list(frequency.keys()))       #frequency.keys() retreives unique elements
 print(result)
