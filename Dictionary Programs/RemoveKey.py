@@ -1,0 +1,21 @@
+#Ways to remove a key from dictionary
+
+
+#Using pop()
+dict ={'name': 'Daphne Barnes',
+       'age': 27,
+       'occupation': 'Developer',
+       'city': 'Rohtak'}
+result = dict.pop('city')
+print(dict)
+print(result)
+
+
+
+#Using del()
+dict ={'name': 'Daphne Barnes',
+       'age': 27,
+       'occupation': 'Developer',
+       'city': 'Rohtak'}
+del dict['city']
+print(dict)
