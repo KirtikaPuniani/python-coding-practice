@@ -38,6 +38,6 @@ dict ={'name': 'Daphne Barnes',
        'age': 27,
        'occupation': 'Developer',
        'city': 'Rohtak'}
-x = dict.pop()
+x = dict.popitem()
 print(dict)
 print(x)
