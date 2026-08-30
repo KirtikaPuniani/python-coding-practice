@@ -30,3 +30,14 @@ dict ={'name': 'Daphne Barnes',
 result = dict.pop('country', 'key not found')
 print(dict)
 print(result)
+
+
+
+#Using popitem() for last key removal
+dict ={'name': 'Daphne Barnes',
+       'age': 27,
+       'occupation': 'Developer',
+       'city': 'Rohtak'}
+x = dict.pop()
+print(dict)
+print(x)
