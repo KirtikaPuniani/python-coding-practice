@@ -19,3 +19,14 @@ dict ={'name': 'Daphne Barnes',
        'city': 'Rohtak'}
 del dict['city']
 print(dict)
+
+
+
+#Using pop() with default value
+dict ={'name': 'Daphne Barnes',
+       'age': 27,
+       'occupation': 'Developer',
+       'city': 'Rohtak'}
+result = dict.pop('country', 'key not found')
+print(dict)
+print(result)
