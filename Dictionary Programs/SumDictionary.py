@@ -21,3 +21,10 @@ result = 0
 for value in dict.values():
     result += value
 print(result)
+
+
+
+#Using map with a lambda
+dict = {'a': 100, 'b': 300, 'c': 500}
+result = sum(map(lambda key: dict[key], dict))
+print(result)
