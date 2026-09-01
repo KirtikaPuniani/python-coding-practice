@@ -14,3 +14,11 @@ dict1 = {'x' : 123, 'y' : 456}
 dict2 = {'a' : 789, 'b' : 345}
 x = {**dict1, **dict2}      #**dict1, **dict2 unpack the key value pairs of dictionaries into the new dictionary. In case of duplicates keys from dictionary 2 overwrites duplicates from dictionary 1
 print(x)
+
+
+
+#Using update
+dict1 = {'x' : 123, 'y' : 456}
+dict2 = {'a' : 789, 'b' : 345}
+dict1.update(dict2)        #adds all key value pairs from dict2 to dict1. If a key exists in both dict1 and dict2 the value from dict2 replaces the value in dict1
+print(dict1)
