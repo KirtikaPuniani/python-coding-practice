@@ -24,3 +24,16 @@ dict = OrderedDict([('a', 1), ('b', 2)])
 dict2 = OrderedDict([('c', 3), ('d', 4)])
 result = OrderedDict(list(dict2.items()) + list(dict.items()))          #concatenates the items of both dictionaries and creates a new OrderedDict with the new key value pair at the beginning of the dictionary
 print(result)
+
+
+
+#Using popitem() and update()
+from collections import OrderedDict
+dict = OrderedDict([('a', 1), ('b', 2)])
+x = OrderedDict()
+
+x.update({'c': 3})          #adds the new key value pair to the new dictionary
+x.move_to_end('c', last=False)          #moves the new key value pair to the beginning of the new dictionary
+while dict:          #iterates through the original dictionary and adds the key value pairs to the new dictionary
+    x.update({dict.popitem(last=False)})          #pops the first key value pair from the original dictionary and adds it to the new dictionary
+print(x)
