@@ -11,7 +11,7 @@ for i, ch in enumerate(string):
     if ch not in od:
         od[ch] = i        #Stores the first occurrence index of each unique character in OrderedDict.
 position = -1
-for ch in x:
+for ch in x:       #Iterates through pattern characters sequentially.
     if ch not in od or od[ch] < position:
         print(False)
         break
