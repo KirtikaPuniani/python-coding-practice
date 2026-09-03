@@ -12,10 +12,10 @@ for i, ch in enumerate(string):
         od[ch] = i        #Stores the first occurrence index of each unique character in OrderedDict.
 position = -1
 for ch in x:       #Iterates through pattern characters sequentially.
-    if ch not in od or od[ch] < position:
+    if ch not in od or od[ch] < position:      #Checks if the character is missing or out of order.
         print(False)
         break
-    position = od[ch]
+    position = od[ch]       #Updates the last matched index.
 else:
     print(True)
     
