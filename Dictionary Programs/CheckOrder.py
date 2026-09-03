@@ -26,13 +26,13 @@ else:
 from collections import OrderedDict
 string = 'Engineers Rock'
 x = 'er'
-od = OrderedDict.fromkeys(string)
-pointer = 0
-for ch in od:
+od = OrderedDict.fromkeys(string)     #creates an ordered set of unique characters.
+pointer = 0        #tracks the position in the pattern.
+for ch in od:          #Loops through keys; if a key matches p[ptr], increment ptr.
     if ch == x[pointer]:
         pointer += 1
     if pointer == len(x):
-        print(True)
+        print(True)        #If all pattern characters are matched, prints True; otherwise prints False.
         break
 else:
     print(False)
