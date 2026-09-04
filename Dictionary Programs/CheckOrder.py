@@ -36,3 +36,22 @@ for ch in od:          #Loops through keys; if a key matches p[ptr], increment p
         break
 else:
     print(False)
+    
+    
+    
+
+#Use manual insertion into OrderedDict
+from collections import OrderedDict
+string = 'Engineers Rock'
+x = 'er'
+od = OrderedDict()
+for ch in string:
+    if ch not in od:
+        od[ch] = None
+pointer = 0
+for ch in od:
+    if ch == x[pointer]:
+        pointer += 1
+    if pointer == len(x):
+        print(True)
+        break
