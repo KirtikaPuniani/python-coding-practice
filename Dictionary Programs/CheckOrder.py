@@ -46,12 +46,12 @@ string = 'Engineers Rock'
 x = 'er'
 od = OrderedDict()
 for ch in string:
-    if ch not in od:
+    if ch not in od:          #Adds unique characters to the OrderedDict, preserving their order of first occurrence.
         od[ch] = None
 pointer = 0
-for ch in od:
-    if ch == x[pointer]:
+for ch in od:          #Iterates through the keys of the OrderedDict; if a key matches x[pointer], increment pointer.
+    if ch == x[pointer]:           #Advances the pointer when a match is found.
         pointer += 1
-    if pointer == len(x):
+    if pointer == len(x):        #Confirms all pattern characters are matched in order; prints True if so, otherwise prints False.
         print(True)
         break
