@@ -16,3 +16,12 @@ dict = {}
 for k, v in zip(keys, values):       #zip(keys, value) combimes keys and values for iteration
     dict[k] = v           #Directly assigns each key-value pair to the dictionary in the order they are zipped together. Each key-value pair is appended to the dictionary using assignment, preserving the order of insertion.
 print(dict)
+
+
+
+#Using update() with dictionary comprehension
+keys = ['name', 'age', 'profession', 'status']
+values = ['Alice', 30, 'Engineer', 'Unemployed']
+dict = {}
+dict.update({k: v for k, v in zip(keys, values)})             #genetes a dictionary from the zipped keys and values using dictionary comprehension, and then updates the empty dictionary with these key-value pairs in order.
+print(dict)
