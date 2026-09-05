@@ -25,3 +25,13 @@ values = ['Alice', 30, 'Engineer', 'Unemployed']
 dict = {}
 dict.update({k: v for k, v in zip(keys, values)})             #genetes a dictionary from the zipped keys and values using dictionary comprehension, and then updates the empty dictionary with these key-value pairs in order.
 print(dict)
+
+
+
+
+#Using OrderedDict from collections
+from collections import OrderedDict
+keys = ['name', 'age', 'profession', 'status']
+values = ['Alice', 30, 'Engineer', 'Unemployed']
+dict = OrderedDict(zip(keys, values))          #zip(keys, values) pairs keys with their corresponding values and OrderedDict() creates the ordered dictionary in insertion order and preserves the order of insertion.
+print(dict)
