@@ -12,3 +12,11 @@
 
 
 
+#Dictioanry with multiple inputs as keys
+dict = {}
+dict[(1, 2)] = "Point A"          #Assigns the value "Point A" to the key (1, 2) in the dictionary.
+dict[(3, 4)] = "Point B"          #Assigns the value "Point B" to the key (3, 4) in the dictionary.
+dict[(5, 6)] = "Point C"          #Assigns the value "Point C" to the key (5, 6) in the dictionary.
+print(dict[(1, 2)])          #Accesses and prints the value associated with the key (1, 2), which is "Point A".
+print(dict[(3, 4)])          #Accesses and prints the value associated with the key (3, 4), which is "Point B".
+print(dict[(5, 6)])         #Accesses and prints the value associated with the key (5, 6), which is "Point C".
