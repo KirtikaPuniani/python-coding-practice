@@ -25,3 +25,27 @@ print(dict.setdefault('profession'))          #Accesses a missing key, returns N
 print(dict.setdefault('salary', 'Key not found'))          #Accesses a missing key, returns the specified default value 'Key not found' and adds the key-value pair to the dictionary.
 print(dict['name'])      #Accesses the existing key 'name', returns its value.
 print(dict['salary'])      #Accesses the newly added key 'salary', returns its value 'Key not found'.    #Prints the updated dictionary with the new key-value pair added for the missing key 'salary'.
+
+
+
+#Using try-except block
+dict = {'name': 'Alice', 'age': 27, 'profession': 'Python Developer', 'status': 'unemployed'}
+try:
+    print(dict['name'])          #Accesses an existing key, returns its value.
+    print(dict['salary'])          #Accesses a missing key, raises a KeyError.
+except KeyError:
+    print('Key not found')          #Catches the KeyError and prints 'Key not found' for the missing key.
+    
+    
+
+#Using if key in dict
+dict = {'name': 'Alice', 'age': 27, 'profession': 'Python Developer', 'status': 'unemployed'}
+if 'name' in dict:
+    print(dict['name'])          #Accesses an existing key, returns its value.
+else:
+    print('Key not found')          #Checks if the key exists in the dictionary, prints 'Key not found' if it doesn't.
+if 'salary' in dict:
+    print(dict['salary'])          #Accesses a missing key, would return its value if it existed.
+else:
+    print('Key not found')          #Checks if the key exists in the dictionary, prints 'Key not found' for the missing key.
+    
