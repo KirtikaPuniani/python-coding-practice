@@ -20,3 +20,20 @@ dict[(5, 6)] = "Point C"          #Assigns the value "Point C" to the key (5, 6)
 print(dict[(1, 2)])          #Accesses and prints the value associated with the key (1, 2), which is "Point A".
 print(dict[(3, 4)])          #Accesses and prints the value associated with the key (3, 4), which is "Point B".
 print(dict[(5, 6)])         #Accesses and prints the value associated with the key (5, 6), which is "Point C".
+
+
+
+#Usng multi keys to store coordinates
+coordinates = {("19.07'53.2", "72.54'51.0"): "Mumbai",
+    ("28.33'34.1", "77.06'16.6"): "Delhi"}
+print(coordinates)
+print('\n')
+
+latitude, longitude, place = [], [], []
+for i in coordinates:
+    latitude.append(i[0])          #Appends the latitude to the latitude list.
+    longitude.append(i[1])          #Appends the longitude to the longitude list.
+    place.append(coordinates[i])          #Appends the corresponding place name to the place list.
+print(latitude)          #Prints the list of latitudes.
+print(longitude)          #Prints the list of longitudes.
+print(place)          #Prints the list of place names.
