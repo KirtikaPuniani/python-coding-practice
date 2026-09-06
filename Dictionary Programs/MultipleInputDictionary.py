@@ -37,3 +37,28 @@ for i in coordinates:
 print(latitude)          #Prints the list of latitudes.
 print(longitude)          #Prints the list of longitudes.
 print(place)          #Prints the list of place names.
+
+
+
+
+
+#Complex dictionary with multiple key inputs
+data = {
+    (1, "John", "Doe"): {"a": "geeks", "b": "software", "c": 75000},
+    (2, "Jane", "Smith"): {"e": 30, "f": "for", "g": 90000},
+    (3, "Bob", "Johnson"): {"h": 35, "i": "project", "j": "geeks"},
+    (4, "Alice", "Lee"): {"k": 40, "l": "marketing", "m": 100000}
+}
+
+print(data[(1, "John", "Doe")]["a"])
+print(data[(2, "Jane", "Smith")]["f"])
+print(data[(3, "Bob", "Johnson")]["j"])
+
+data[(1, "John", "Doe")]["a"] = {"b": "marketing", "c": 75000}
+data[(3, "Bob", "Johnson")]["j"] = {"h": 35, "i": "project"}
+
+print(data[(1, "John", "Doe")]["a"])
+print(data[(3, "Bob", "Johnson")]["j"])
+#Each tuple key uniquely identifies a record.
+#The nested dictionary stores related data for that key.
+#You can easily access or update values using the key tuple and dictionary keys.
