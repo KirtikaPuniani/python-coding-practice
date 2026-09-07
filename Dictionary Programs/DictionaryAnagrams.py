@@ -42,3 +42,17 @@ for word in words:
     key = ''.join(sorted(word))
     anagrams[key].append(word)
 print(list(anagrams.values()))  # Print all anagram groups
+
+
+
+
+#Using dictionary comprehension
+words = ["listen", "silent", "enlist", "hello", "world"]
+anagrams = {}
+
+for word in words:
+    # Create a key by sorting the characters of the word
+    key = ''.join(sorted(word))
+    anagrams[key] = anagrams.get(key, []) + [word]
+output = list(anagrams.values())
+print(output)  # Print all anagram groups
