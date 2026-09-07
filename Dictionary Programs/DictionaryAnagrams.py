@@ -23,9 +23,22 @@
 #Using Counter from collections
 from collections import Counter, defaultdict
 words = ["listen", "silent", "enlist", "hello", "world"]
-result = defaultdict(list)
+anagrams = defaultdict(list)
 for word in words:
     # Create a key by counting the characters of the word
     key = tuple(sorted(Counter(word).items()))
-    result[key].append(word)
-print(list(result.values()))  # Print all anagram groups
+    anagrams[key].append(word)
+print(list(anagrams.values()))  # Print all anagram groups
+
+
+
+
+#Using defaultdict from collections
+from collections import defaultdict
+words = ["listen", "silent", "enlist", "hello", "world"]
+anagrams = defaultdict(list)
+for word in words:
+    # Create a key by sorting the characters of the word
+    key = ''.join(sorted(word))
+    anagrams[key].append(word)
+print(list(anagrams.values()))  # Print all anagram groups
