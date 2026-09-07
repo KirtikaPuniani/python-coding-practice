@@ -56,3 +56,15 @@ for word in words:
     anagrams[key] = anagrams.get(key, []) + [word]
 output = list(anagrams.values())
 print(output)  # Print all anagram groups
+
+
+
+
+#Using itertools.groupby
+from itertools import groupby
+words = ["listen", "silent", "enlist", "hello", "world"]
+# Sort words based on their sorted character tuple
+words.sort(key=lambda word: tuple(sorted(word)))
+# Group words by their sorted character tuple
+anagrams = [list(group) for key, group in groupby(words, key=lambda word: tuple(sorted(word)))]
+print(anagrams)  # Print all anagram groups
