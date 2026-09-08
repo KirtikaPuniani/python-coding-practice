@@ -3,8 +3,8 @@
 
 #Using collections.Counter
 from collections import Counter
-string = 'happybithdaytoyouhappyhappybithdaytoyou'
-k = 3
+string = 'hellomynameiskirtikapuniani'
+k = 5
 count = Counter(string)          #Counts the occurrences of each character in the string.
 result = [ch for ch in string if count[ch] == 1]          #Creates a list of characters that occur only once in the string, preserving their order of first occurrence.
 print(result[k-1] if k <= len(result) else None)          #Prints the k-th non-repeating character if it exists; otherwise prints None.
@@ -15,8 +15,8 @@ print(result[k-1] if k <= len(result) else None)          #Prints the k-th non-r
 
 #Using OrderedDict
 from collections import OrderedDict
-string = 'happybithdaytoyouhappyhappybithdaytoyou'
-k = 9
+string = 'hellomynameiskirtikapuniani'
+k = 2
 frequency = OrderedDict()          #Creates an ordered dictionary to maintain the order of first occurrence of characters.
 for ch in string:
     frequency[ch] = frequency.get(ch, 0) + 1          #Updates the frequency count of each character in the ordered dictionary.
@@ -26,8 +26,8 @@ print(non_repeating[k-1] if len(non_repeating) >= k else None)          #Prints 
 
 
 #Using regular dictionary
-string = 'happybithdaytoyouhappyhappybithdaytoyou'
-k = 9
+string = 'hellomynameiskirtikapuniani'
+k = 1
 frequency = {}          #Creates a regular dictionary to store the frequency of characters.
 for ch in string:
     frequency[ch] = frequency.get(ch, 0) + 1          #Updates the frequency count of each character in the dictionary.
@@ -41,8 +41,8 @@ print(result[k-1] if len(result) >= k else None)          #Prints the k-th non-r
 
 
 #Using list comprehension
-string = 'happybithdaytoyouhappyhappybithdaytoyou'
-k = 9
+string = 'hellomynameiskirtikapuniani'
+k = 4
 frequency = {}
 for ch in string:
     frequency[ch] = frequency.get(ch, 0) + 1          #Updates the frequency count of each character in the dictionary.
