@@ -25,4 +25,14 @@ print(non_repeating[k-1] if len(non_repeating) >= k else None)          #Prints 
 
 
 
-#
+#Using regular dictionary
+string = 'happybithdaytoyouhappyhappybithdaytoyou'
+k = 9
+frequency = {}          #Creates a regular dictionary to store the frequency of characters.
+for ch in string:
+    frequency[ch] = frequency.get(ch, 0) + 1          #Updates the frequency count of each character in the dictionary.
+result = []
+for ch in string:
+    if frequency[ch] == 1 and ch not in result:          #Checks if the character occurs only once and is not already in the result list.
+        result.append(ch)          #Appends the non-repeating character to the result list.
+print(result[k-1] if len(result) >= k else None)          #Prints the k-th non-repeating character if it exists; otherwise prints None.
