@@ -36,3 +36,15 @@ for ch in string:
     if frequency[ch] == 1 and ch not in result:          #Checks if the character occurs only once and is not already in the result list.
         result.append(ch)          #Appends the non-repeating character to the result list.
 print(result[k-1] if len(result) >= k else None)          #Prints the k-th non-repeating character if it exists; otherwise prints None.
+
+
+
+
+#Using list comprehension
+string = 'happybithdaytoyouhappyhappybithdaytoyou'
+k = 9
+frequency = {}
+for ch in string:
+    frequency[ch] = frequency.get(ch, 0) + 1          #Updates the frequency count of each character in the dictionary.
+result = [ch for ch in string if frequency[ch] == 1]          #Creates a list of characters that occur only once in the string, preserving their order of first occurrence.
+print(result[k-1] if len(result) >= k else None)          #Prints the k-th non-repeating character if it exists; otherwise prints None.
