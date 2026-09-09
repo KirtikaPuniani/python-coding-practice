@@ -30,3 +30,23 @@ if n == m:         #If both the lists mathches then binaries are anagrams
     print("Yes")
 else:
     print("No")
+    
+    
+    
+    
+#Using collections.Counter and dictionary comparison
+from collections import Counter
+x, y = 10, 12
+a = bin(x)[2:]
+b = bin(y)[2:]
+pad = abs(len(a) - len(b))
+if len(a) > len(b):
+    y = '0' * pad + b
+else:
+    y = '0' * pad + a
+n = Counter(b)
+m = Counter(a)
+if n == m:
+    print('Yes')
+else:
+    print('No') 
