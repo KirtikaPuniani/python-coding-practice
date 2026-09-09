@@ -21,12 +21,12 @@ else:
     
 #Using zfill() and counting bits
 x, y = 10, 13
-a = bin(x)[2:].zfill(32)
+a = bin(x)[2:].zfill(32)       #bin() converts the given integer into binary strings. [2:] removes the '0b' prefix from the binary string. zfill() pads the string with leading zeros to make it 32 bits long.
 b = bin(y)[2:].zfill(32)
 
-n = [a.count('0'), a.count('1')]
+n = [a.count('0'), a.count('1')]       #counts the number of 0's and 1's in the binary representation of x and y and creates a list
 m = [b.count('0'), b.count('1')]
-if n == m:
+if n == m:         #If both the lists mathches then binaries are anagrams
     print("Yes")
 else:
     print("No")
