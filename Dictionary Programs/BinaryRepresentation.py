@@ -37,16 +37,16 @@ else:
 #Using collections.Counter and dictionary comparison
 from collections import Counter
 x, y = 10, 12
-a = bin(x)[2:]
+a = bin(x)[2:]       #binary strings without '0b'
 b = bin(y)[2:]
 pad = abs(len(a) - len(b))
 if len(a) > len(b):
-    y = '0' * pad + b
+    y = '0' * pad + b      #adds zeros to equilize lengths
 else:
     y = '0' * pad + a
-n = Counter(b)
+n = Counter(b)      #creates frequency  maps of 0s and 1s
 m = Counter(a)
-if n == m:
+if n == m:      #if equal counters binaries are anagrams
     print('Yes')
 else:
     print('No') 
