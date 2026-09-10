@@ -49,4 +49,4 @@ m = Counter(a)
 if n == m:      #if equal counters binaries are anagrams
     print('Yes')
 else:
-    print('No') 
+    print('No')
