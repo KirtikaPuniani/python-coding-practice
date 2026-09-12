@@ -39,5 +39,8 @@ print(largest_anagram_subset_size(words))
 from collections import Counter
 
 words = ['cars', 'bikes', 'arcs', 'steer']
-max_anagrams = max(map(lambda x: sum(Counter(y) == Counter(x) for y in words), words), default=0)
+max_anagrams = max(map(lambda x: sum(Counter(y) == Counter(x) for y in words), words), default=0)       #Counter(y) == Counter(x): checks if two words are anagrams. sum(): counts how many anagrams each word has. map(): applies this to all words, and max() returns the largest count.
 print(max_anagrams)
+
+
+
