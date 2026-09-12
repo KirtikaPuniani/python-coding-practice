@@ -6,14 +6,15 @@
 #Using collections.Counter
 from collections import Counter
 def MaxAnagrams(input_string):
-    words = input_string.split(" ")
+    words = input_string.split(" ")      #splits the input string into individual words.
     
     for i in range(len(words)):
-        words[i] = ''.join(sorted(words[i]))
+        words[i] = ''.join(sorted(words[i]))      #sorts each word to group anagrams under a common form.
     
-    frequencyDict = Counter(words)
-    print(max(frequencyDict.values()))
+    frequencyDict = Counter(words)       #counts how many times each sorted word (anagram group) appears.
+    print(max(frequencyDict.values()))    #finds the size of the largest anagram group.
 
 if __name__ == "__main__":
     input_string = 'ant magenta magnate tan gnamate'
     MaxAnagrams(input_string)
+    
