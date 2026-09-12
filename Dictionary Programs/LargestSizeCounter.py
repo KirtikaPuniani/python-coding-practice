@@ -32,7 +32,3 @@ def largest_anagram_subset_size(words):
 
 words = ['ant', 'magenta', 'magnate', 'tan', 'gnamate']
 print(largest_anagram_subset_size(words))
-
-' '.join(sorted(word)): sorts each word to create a common key for its anagrams.
-anagram_dict[sorted_word].append(word): groups words that share the same sorted key.
-max(len(val) for val in anagram_dict.values()): finds the size of the largest anagram group.
