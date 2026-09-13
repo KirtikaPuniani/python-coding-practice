@@ -25,3 +25,14 @@ str = string.split()       #split function splits the sentence into words.
 string_op = list(set(str))       #set function removes duplicates automatically since sets can;t contain repeated elements. Converting set back to a list may change the order of the words
 result = ' '.join(string_op)
 print(result)
+
+
+#Using simple loop
+string = '''my name is kirtika puniani. my brother's name is cherish'''
+str = string.split()
+result = []
+for word in str:
+    if word not in result:
+        result.append(word)
+string_op = ' '.join(result)
+print(string_op)
