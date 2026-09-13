@@ -21,7 +21,7 @@ print(result)
 
 #Using set with join
 string = '''my name is kirtika puniani. my brother's name is cherish'''
-str = string.split()
-string_op = list(set(str))
+str = string.split()       #split function splits the sentence into words. 
+string_op = list(set(str))       #set function removes duplicates automatically since sets can;t contain repeated elements. Converting set back to a list may change the order of the words
 result = ' '.join(string_op)
 print(result)
