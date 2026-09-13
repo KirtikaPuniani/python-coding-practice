@@ -31,8 +31,8 @@ print(result)
 string = '''my name is kirtika puniani. my brother's name is cherish'''
 str = string.split()
 result = []
-for word in str:
+for word in str:       #the loop checks each word in str. If word not already in result, it's added to maintain forst occurence
     if word not in result:
         result.append(word)
-string_op = ' '.join(result)
+string_op = ' '.join(result)        #join function rebuilds the sentence from unique words
 print(string_op)
