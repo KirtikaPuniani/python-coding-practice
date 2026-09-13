@@ -13,7 +13,7 @@ print(result)
 #Using list comprehension with set
 string = '''my name is kirtika puniani. my brother's name is cherish'''
 str = string.split()
-seen = set()
+seen = set()       #set(), empty set created to record words already seen
 string_op = [word for word in str if not (word in seen or seen.add(word))]
 result = ' '. join(string_op)
 print(result) 
