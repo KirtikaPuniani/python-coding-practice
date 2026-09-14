@@ -23,7 +23,7 @@ def mirrorChars(input, k):
     dictChars = dict(zip(original, reverse))       #creates a dictionary mapping each letter to its mirror
     
     prefix = input[0:k-1]        #first k-1 chars, unchanges
-    suffix = input[k-1:]
+    suffix = input[k-1:]         #chars from position k onward, to be mirrored
     mirror = ''
     
     for i in range(0, len(suffix)):
