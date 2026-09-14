@@ -20,9 +20,9 @@
 def mirrorChars(input, k):
     original = 'abcdefghijklmnopqrstuvwxyz'
     reverse = 'zyxwvutsrqponmlkjihgfedcba'
-    dictChars = dict(zip(original, reverse))
+    dictChars = dict(zip(original, reverse))       #creates a dictionary mapping each letter to its mirror
     
-    prefix = input[0:k-1]
+    prefix = input[0:k-1]        #first k-1 chars, unchanges
     suffix = input[k-1:]
     mirror = ''
     
