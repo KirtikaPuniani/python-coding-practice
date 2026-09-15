@@ -12,7 +12,7 @@ print(dict(frequency))       #dict(frequency) converts the Counter object to a s
 #Using defaultdict
 from collections import defaultdict
 a = ['apple', 'banana', 'kiwi', 'apple', 'grapes', 'banana', 'orange']
-frequency = defaultdict(int)
-for item in a:
+frequency = defaultdict(int)         #defaultdict(int) creates a dictionary where each missing key defaults to 0
+for item in a:        #for rach item in a, frequency[item] += 1 increments its count
     frequency[item] += 1
 print(dict(frequency))
