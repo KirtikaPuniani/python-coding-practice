@@ -14,3 +14,9 @@ for key, value in a:
     result[key] = value
 print(result)
     
+
+
+#Using map with dict
+a = [('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+result = dict(map(lambda x: (x[0], x[1]), a))
+print(result)
