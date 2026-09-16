@@ -12,3 +12,16 @@ for word in c1:
         continue
     if all(ord(word[i]) <= ord(word[i+1]) for i in range(len(word)-1)):           #check if letter are in alphabetical order
         print(f"{word}: Word is ordered")
+        
+        
+##Approach
+# 1. Scraping the dictioanry
+#       - Fetch the content from the URL using the requests library
+#       - Decode the UTF-8 content into a trinh
+#       - Spliot the string into a list of words
+
+#2. Finding ordered words
+#       - Traverse the list of words
+#       - Compare ASCII values of adjacent chars in each word
+#       - If all chars are in alphabetical order, the word is ordered
+#       - Otherwise skip it
