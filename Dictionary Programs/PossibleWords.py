@@ -5,6 +5,20 @@
 #Using set and subsets
 dict = ["go", "bat", "me", "eat", "goal", "boy", "run"]
 ch = ['e', 'o', 'b', 'a', 'm', 'g', 'l']
-x = set(ch)
-res = [w for w in dict if set(w).issubset(x)]
+x = set(ch)          #converts chars to a set for quick lookup
+res = [w for w in dict if set(w).issubset(x)]       #set(w).issubset(x) check if all of the word exist in the given chars
 print(res)
+
+
+
+#Using dictionary county comparison
+dict = ["go", "bat", "me", "eat", "goal", "boy", "run"]
+ch = ['e', 'o', 'b', 'a', 'm', 'g', 'l']
+for word in dict:
+    valid = True
+    for a in word:      #iterates each char in the word
+        if a not in ch or word.count(a) > ch.count(a):        #ensures the letter exists and isn't  used more times than available
+            valid = False
+            break
+    if valid:
+        print(word)        #prints word that can be formed using given chars
