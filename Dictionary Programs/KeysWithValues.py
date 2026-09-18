@@ -19,10 +19,10 @@ print(dict(result))
 #Using dictioanry and loops
 dictionary = {'apple': [1, 2, 3], 'and': [1, 4], 'oranges': [4, 2]}
 result = {}
-for key, vals in dictionary.items():
+for key, vals in dictionary.items():       #iterates over each key–value pair
     for v in vals:
-        if v in result:
-            result[v].append(key)
+        if v in result:        #checks if the value already exists in the result dictionary
+            result[v].append(key)        #adds the current key to the existing list of keys for that value
         else:
             result[v] = [key]
 print(result)
