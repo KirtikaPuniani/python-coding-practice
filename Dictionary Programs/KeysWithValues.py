@@ -8,8 +8,21 @@
 #Using defaultdict and loop
 from collections import defaultdict
 dictionary = {'apple': [1, 2, 3], 'and': [1, 4], 'oranges': [4, 2]}
-result = defaultdict(list)
+result = defaultdict(list)        #creates a dictionary where each key automatically starts with an empty list
 for key, vals in dictionary.items():
     for v in vals:
-        result[v].append(key)
+        result[v].append(key)        #appends the current key to the list of keys associated with the v
 print(dict(result))
+
+
+
+#Using dictioanry and loops
+dictionary = {'apple': [1, 2, 3], 'and': [1, 4], 'oranges': [4, 2]}
+result = {}
+for key, vals in dictionary.items():
+    for v in vals:
+        if v in result:
+            result[v].append(key)
+        else:
+            result[v] = [key]
+print(result)
