@@ -35,12 +35,12 @@ for i in dict:       #checks each in list
 #Recursive combination approach
 dict = ["go", "bat", "me", "eat", "goal", "boy", "run"]
 ch = ['e', 'o', 'b', 'a', 'm', 'g', 'l']
-def recursive(chars, word = ''):
-    if word in dict:
+def recursive(chars, word = ''):     #recursively builds all combinations of characters.
+    if word in dict:       #prints if the formed string exists in dictionary
         print(word)
     for i in chars:
-        x = chars.copy()
+        x = chars.copy()        #copy and remove, prevent reuse of the same letter
         x.remove(i)
-        recursive(x, word+i)
+        recursive(x, word+i)         #continues forming longer words recursively
 
 recursive(ch)
