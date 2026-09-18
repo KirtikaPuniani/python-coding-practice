@@ -5,3 +5,11 @@
 
 
 
+#Using defaultdict and loop
+from collections import defaultdict
+dictionary = {'apple': [1, 2, 3], 'and': [1, 4], 'oranges': [4, 2]}
+result = defaultdict(list)
+for key, vals in dictionary.items():
+    for v in vals:
+        result[v].append(key)
+print(dict(result))
