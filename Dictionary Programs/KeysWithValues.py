@@ -26,3 +26,14 @@ for key, vals in dictionary.items():       #iterates over each key–value pair
         else:
             result[v] = [key]
 print(result)
+
+
+
+
+#Using setdefault
+dictionary = {'apple': [1, 2, 3], 'and': [1, 4], 'oranges': [4, 2]}
+result = {}
+for key, vals in dictionary.items():        #Iterates through each key-value pair in the dictionary.
+    for v in vals:         #For every value, adds its corresponding key to res.
+        result.setdefault(v, []).append(key)       # Uses setdefault() to handle missing keys efficiently.
+print(result)
