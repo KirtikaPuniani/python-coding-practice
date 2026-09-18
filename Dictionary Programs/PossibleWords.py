@@ -24,3 +24,9 @@ for word in dict:
         print(word)        #prints word that can be formed using given chars
         
 
+#Using list filtering
+dict = ["go", "bat", "me", "eat", "goal", "boy", "run"]
+ch = ['e', 'o', 'b', 'a', 'm', 'g', 'l']
+for i in dict:       #checks each in list
+    if all(i.count(c) <= ch.count(c) for c in set(i)):     #ensures every character in the word exists within the available characters and isn’t overused.
+        print(i)
