@@ -33,3 +33,14 @@ for i in dict:       #checks each in list
         
 
 #Recursive combination approach
+dict = ["go", "bat", "me", "eat", "goal", "boy", "run"]
+ch = ['e', 'o', 'b', 'a', 'm', 'g', 'l']
+def recursive(chars, word = ''):
+    if word in dict:
+        print(word)
+    for i in chars:
+        x = chars.copy()
+        x.remove(i)
+        recursive(x, word+i)
+
+recursive(ch)
