@@ -20,6 +20,11 @@ print(sys.getsizeof(a))        #sys.getsizeof() measures the memory used by the 
 
 
 #Using memoryview
+# memoryview() is typically used for low-level memory management and binary data. It creates a view object that provides access to the memory buffer of an object. While not often used for simple tuples, it can be helpful in performance-sensitive scenarios.
 a = (1, 2, 3, 5, 'a', 9, 'b', 45, 'x')
-result = memoryview(bytearray(str(a),'utf-8'))
-print(result.nbytes) 
+result = memoryview(bytearray(str(a),'utf-8'))    #bytearray(str(tup), 'utf-8') converts tuple into bytes. AND memoryview provides a view into the memory buffer.
+print(result.nbytes)      #nbytes returns the number of bytes used by this byte representation.
+
+
+
+#Using id
