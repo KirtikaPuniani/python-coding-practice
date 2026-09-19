@@ -28,7 +28,7 @@ print(result.nbytes)      #nbytes returns the number of bytes used by this byte 
 
 
 #Using id
-id() function to obtain memory address of the tuple or its elements. This method helps us to understand where objects are stored in memory, but it doesn’t directly give us their size.
+#id() function to obtain memory address of the tuple or its elements. This method helps us to understand where objects are stored in memory, but it doesn’t directly give us their size.
 a = (1, 2, 3, 5, 'a', 9, 'b', 45, 'x')
 for item in a:
     print(f"Memory address of {item}: {id(item)}")
