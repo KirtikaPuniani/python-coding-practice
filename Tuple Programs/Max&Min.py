@@ -31,10 +31,15 @@ a = (1, 3, 45, 5, 77, 45, 66, 23)
 k = 1
 l = sorted(a)
 min, max = [], []
-for i, val in enumerate(l):
-    if i < k:
+for i, val in enumerate(l):       #enumerate loops over the sorted list with index and value
+    if i < k:           #Appends first k elements to min element
         min.append(val)
-    if i >= len(l) - k:
+    if i >= len(l) - k:         #Appends first k elements to max element
         max.append(val)
 print(min)
 print(max)
+
+
+
+
+#Using min and max in a loop
