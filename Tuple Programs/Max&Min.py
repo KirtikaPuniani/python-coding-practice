@@ -17,8 +17,24 @@ print(l)
 #Convert tuple to list, sort it, and slice the first and last K elements
 a = (1, 3, 45, 5, 77, 45, 66, 23)
 k = 1
-temp = sorted(a)
-min = temp[:k]
-max = temp[-k:]
+temp = sorted(a)        #sorted function sorts the tuple in ascending order
+min = temp[:k]         #slices the first k elements as the k min elements
+max = temp[-k:]        #slices the last k elements as the k ,am elements
+print(min)
+print(max)
+
+
+
+
+#Using sorted and loop
+a = (1, 3, 45, 5, 77, 45, 66, 23)
+k = 1
+l = sorted(a)
+min, max = [], []
+for i, val in enumerate(l):
+    if i < k:
+        min.append(val)
+    if i >= len(l) - k:
+        max.append(val)
 print(min)
 print(max)
