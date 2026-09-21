@@ -43,3 +43,24 @@ print(max)
 
 
 #Using min and max in a loop
+a = (1, 3, 45, 5, 77, 45, 66, 23)
+k = 1
+x, y  = [], []
+for element in a:
+    if len(x) < k:
+        x.append(element)
+    else:
+        if element < max(x):
+            x.remove(max(x))
+            x.append(element)
+    if len(y) < k:    
+        y.append(element)
+    else:
+        if element > min(y):
+            y.remove(min(y))
+            y.append(element)
+x.sort()
+y.sort(reverse=True)
+
+print(x)
+print(y)
