@@ -1,0 +1,1 @@
+#Create a list of tuples with numbers and their cubes
