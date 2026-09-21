@@ -64,3 +64,56 @@ y.sort(reverse=True)
 
 print(x)
 print(y)
+
+
+
+#Using a loop and two lists
+a = (1, 3, 45, 5, 77, 45, 66, 23)
+k = 1
+x =[]
+y =[]
+for element in a:
+    if len(x) < k:
+        x.append(element)
+    else:
+        if element < max(x):
+            x.remove(max(x))
+            x.append(element)
+    if len(y) < k:
+        y.append(element)
+    else:
+        if element > min(y):
+            y.remove(min(y))
+            y.append(element)
+x.sort()
+x.sort(reverse=True)
+print(x)
+print(y)
+
+
+
+
+
+#Using while loop + min/max
+a = (1, 3, 45, 5, 77, 45, 66, 23)
+k = 1
+
+list_a = list(a)
+x = []
+y = []
+i = 0
+while i < k:
+    val = min(list_a)
+    x.append(val)
+    list_a.remove(val)
+    i += 1
+i = 0
+while i < k:
+    val = max(list_a)
+    y.append(val)
+    list_a.remove(val)
+    i += 1
+x.sort()
+y.sort(reverse=True)
+print(x)
+print(y)
