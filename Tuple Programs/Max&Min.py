@@ -70,13 +70,13 @@ print(y)
 #Using a loop and two lists
 a = (1, 3, 45, 5, 77, 45, 66, 23)
 k = 1
-x =[]
+x =[]          #x and y track k smallest and largest elements
 y =[]
 for element in a:
-    if len(x) < k:
+    if len(x) < k:        #fill lists initially
         x.append(element)
     else:
-        if element < max(x):
+        if element < max(x):      #replace larger/smaller elements as needed
             x.remove(max(x))
             x.append(element)
     if len(y) < k:
@@ -98,18 +98,18 @@ print(y)
 a = (1, 3, 45, 5, 77, 45, 66, 23)
 k = 1
 
-list_a = list(a)
+list_a = list(a)       #Converts tuple to list to allow element removal
 x = []
 y = []
 i = 0
-while i < k:
-    val = min(list_a)
+while i < k:        #Loops K times to extract required smallest or largest elements
+    val = min(list_a)            #Finds and removes the current smallest element, storing it in x
     x.append(val)
     list_a.remove(val)
     i += 1
 i = 0
 while i < k:
-    val = max(list_a)
+    val = max(list_a)          #Finds and removes the current largest element, storing it in y
     y.append(val)
     list_a.remove(val)
     i += 1
