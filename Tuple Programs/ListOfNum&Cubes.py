@@ -25,3 +25,8 @@ print(output)
 
 
 #Using for loop with append
+tuple = [1,3,5,7,9]
+output = []
+for n in tuple:
+    output.append((n, n**3))
+print(output)
