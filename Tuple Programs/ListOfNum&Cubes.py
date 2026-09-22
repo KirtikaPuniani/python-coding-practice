@@ -13,5 +13,7 @@ print(output)
 
 #Using map with lambda
 tuple = [1,3,5,7,9]
-output = list(map(lambda n: (n, n**3), tuple))
+output = list(map(lambda n: (n, n**3), tuple))    #lambda n, defines an anonymous function to create tuples of (number, cube). Map function applies the lambda to each element of numbers. List converts the result of map to a list
 print(output)
+
+
