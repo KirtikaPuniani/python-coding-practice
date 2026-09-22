@@ -15,9 +15,9 @@ print(output)
 x = [(1,3,5), (2,4,6), (7,9,23)]
 y = (8,10,12)
 k = 3
-min_diff, output = float('inf'), None
+min_diff, output = float('inf'), None             #initializes tracking of the smallest difference (min_diff) and the corresponding index (output)
 for index, value in enumerate(x):
     diff = abs(value[k-1] - y[k-1])
-    if diff < min_diff:
+    if diff < min_diff:           #updates the smallest difference and its index whenever a smaller difference is found
         min_diff, output = diff, index
 print(x[output])
