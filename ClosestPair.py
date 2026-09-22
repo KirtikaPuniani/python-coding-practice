@@ -41,6 +41,6 @@ print(output)
 x = [(1,3,5), (2,4,6), (7,9,23), (23,25,27,29)]
 y = (8,10,12)
 k = 1
-sort = sorted(x, key = lambda x: abs(x[k-1] - y[k-1]))
-output = sort[0]
+sort = sorted(x, key = lambda x: abs(x[k-1] - y[k-1]))              #sorted function here sorts the tuples in t based on the absolute difference between their Kth element and tup[K-1]
+output = sort[0]         #sort[0] picks the first tuple, which has the smallest difference
 print(output)
