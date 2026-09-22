@@ -24,7 +24,10 @@ print(x)
 #Insert function places the tuple at a specific position. List comprehension creates a new tuple when merging
 a = [1,2,3]
 b= (4,5)
-a.insert(len(a), b)
+a.insert(len(a), b)         #adds b at the end of a and tuple(x for x in a) creates a tuple from a, then + tuple(b) merges it with b
 print(a)
 x = tuple(x for x in a) + tuple(b)
 print(x)
+
+
+
