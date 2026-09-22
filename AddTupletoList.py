@@ -31,3 +31,12 @@ print(x)
 
 
 
+#Using list ans tuple
+a = [1,2,3]
+b= (4,5)
+a.extend(list(b))
+print(a)
+temp_list = list(b)
+temp_list.extend(a)
+x = tuple(temp_list)
+print(x)
