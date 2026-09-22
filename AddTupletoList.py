@@ -18,3 +18,13 @@ a.append(b)
 print(a)
 x = (*a, *b)
 print(x)
+
+
+#Using insert and list comprehension
+#Insert function places the tuple at a specific position. List comprehension creates a new tuple when merging
+a = [1,2,3]
+b= (4,5)
+a.insert(len(a), b)
+print(a)
+x = tuple(x for x in a) + tuple(b)
+print(x)
