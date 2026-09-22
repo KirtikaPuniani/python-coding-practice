@@ -17,3 +17,11 @@ output = list(map(lambda n: (n, n**3), tuple))    #lambda n, defines an anonymou
 print(output)
 
 
+#Using zip
+tuple = [1,3,5,7,9]
+output = list(zip(tuple, [n**3 for n in tuple]))       #[n**3 for n in tuple] generates a list of cubes. Zip(tuple, cubes) pairs each number with its cube. List function converts the pairs into A list of tuples
+print(output)
+
+
+
+#Using for loop with append
