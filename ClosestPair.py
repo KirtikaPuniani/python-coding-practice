@@ -21,3 +21,14 @@ for index, value in enumerate(x):
     if diff < min_diff:           #updates the smallest difference and its index whenever a smaller difference is found
         min_diff, output = diff, index
 print(x[output])
+
+
+
+#Using heapq.nsmallest()
+#This method uses a heap to efficiently find the tuple(s) with the smallest difference. It’s especially useful when you want the closest N tuples rather than just one
+import heapq
+x = [(1,3,5), (2,4,6), (7,9,23), (23,25,27,29)]
+y = (8,10,12)
+k = 1
+output = heapq.nsmallest(1, x, key = lambda x: abs(x[k-1] - y[k-1]))[0]
+print(output)
