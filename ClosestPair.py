@@ -30,5 +30,17 @@ import heapq
 x = [(1,3,5), (2,4,6), (7,9,23), (23,25,27,29)]
 y = (8,10,12)
 k = 1
-output = heapq.nsmallest(1, x, key = lambda x: abs(x[k-1] - y[k-1]))[0]
+output = heapq.nsmallest(1, x, key = lambda x: abs(x[k-1] - y[k-1]))[0]         #heapq.nsmallest finds the smallest element(s) based on the provided key. 
+                                                                                #key = lambda function computes the difference. [0] extracts the closest tuple
+print(output)
+
+
+
+
+#Using sorted with custom key
+x = [(1,3,5), (2,4,6), (7,9,23), (23,25,27,29)]
+y = (8,10,12)
+k = 1
+sort = sorted(x, key = lambda x: abs(x[k-1] - y[k-1]))
+output = sort[0]
 print(output)
