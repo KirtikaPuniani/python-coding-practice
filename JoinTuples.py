@@ -10,10 +10,10 @@
 #Using defaultdict and loop
 from collections import defaultdict
 tup = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)] 
-map = defaultdict(list)
+map = defaultdict(list)            #defaultdict(list) - creates empty lists automatically
 for k, v in tup:
-    map[k].append(v)
-output = [(k, *v) for k, v in map.items()]
+    map[k].append(v)               #mapp[k].append(v) - groups values by their first elemen
+output = [(k, *v) for k, v in map.items()]          #[(k, *v) ...]: converts grouped data back to tuples.Using dictionary + list comprehension
 print(output)
 
 
