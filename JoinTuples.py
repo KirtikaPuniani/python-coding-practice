@@ -13,9 +13,16 @@ tup = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)]
 map = defaultdict(list)
 for k, v in tup:
     map[k].append(v)
-res = [(k, *v) for k, v in map.items()]
-print(res)
+output = [(k, *v) for k, v in map.items()]
+print(output)
 
 
 
 #Using itertools.groupby()
+from itertools import groupby
+tup = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)] 
+output = []
+for k, g in groupby(tup, key = lambda x: x[0]):
+    vals = [v for _, v in g]
+    output.append((k, *vals))
+print(output)
