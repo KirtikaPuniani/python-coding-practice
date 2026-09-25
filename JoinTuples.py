@@ -22,7 +22,7 @@ print(output)
 from itertools import groupby
 tup = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)] 
 output = []
-for k, g in groupby(tup, key = lambda x: x[0]):
-    vals = [v for _, v in g]
-    output.append((k, *vals))
+for k, g in groupby(tup, key = lambda x: x[0]):          #groupby(t, key=lambda x: x[0]): groups by first element
+    vals = [v for _, v in g]            #vals = [v for _, v in g]: collects second elements
+    output.append((k, *vals))         #res.append((k, *vals)): forms combined tuples
 print(output)
