@@ -33,6 +33,6 @@ print(output)
 tup = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)] 
 temp = {}
 for x in tup:
-    temp[x[0]] = temp.get(x[0], []) + list(x[1:])
+    temp[x[0]] = temp.get(x[0], []) + list(x[1:])         #temp.get() function Returns current values or initializes an empty list. ## + list(x[1:]): Adds tuple elements to the existing list ### (k,) + tuple(v): Combines key and grouped values.
 output = [(k,) + tuple(v) for k, v in temp.items()]
 print(output)
