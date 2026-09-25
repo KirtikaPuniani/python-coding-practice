@@ -43,21 +43,6 @@ print(output)
 def join_tup(tup, i):
     if i == len(tup) - 1:
         return tup
-    elif tup[i][0] == tup[i+1][0]:           
-        tup[i] += tup[i+1][1:]
-        tup.pop(i+1)
-        return join_tup(tup, i)
-    else:
-        return join_tup(tup, i+1)
-tup = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)] 
-output = join_tup(tup, 0)
-print(output)
-
-
-
-def join_tup(tup, i):
-    if i == len(tup) - 1:
-        return tup
     elif tup[i][0] == tup[i+1][0]:           #Checks if consecutive tuples share the same key
         tup[i] += tup[i+1][1:]           #Merges next tuple’s values
         tup.pop(i+1)        #removes the merged tuple
