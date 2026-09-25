@@ -26,3 +26,7 @@ for k, g in groupby(tup, key = lambda x: x[0]):          #groupby(t, key=lambda 
     vals = [v for _, v in g]            #vals = [v for _, v in g]: collects second elements
     output.append((k, *vals))         #res.append((k, *vals)): forms combined tuples
 print(output)
+
+
+
+#Using dictionary and list comprehension
