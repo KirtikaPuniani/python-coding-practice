@@ -30,3 +30,9 @@ print(output)
 
 
 #Using dictionary and list comprehension
+tup = [(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)] 
+temp = {}
+for x in tup:
+    temp[x[0]] = temp.get(x[0], []) + list(x[1:])
+output = [(k,) + tuple(v) for k, v in temp.items()]
+print(output)
