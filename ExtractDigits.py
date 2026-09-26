@@ -23,3 +23,12 @@ tup = [(15, 3), (3, 9), (1, 10), (99, 2)]
 x = map(str, chain.from_iterable(tup))         #chain.from_iterable(tup)flattens all tuples into a single sequence.    ##map() function converts each number to a string
 output = {d for n in x for d in n}       #Extracts individual digits and keeps only unique ones
 print(output)
+
+
+
+#Using regex
+import re
+tup = [(15, 3), (3, 9), (1, 10), (99, 2)]
+reg = re.sub(r'[\[\]\(\), ]', '', str(tup))      #str() function converts tuple to string.    ##re.sub() removes brackets, commas and scpaces/
+output = [int(i) for i in set(reg)]          #set(reg) collects unique digit characters.   ##int(i) for i in converts them back to integers
+print(output)
