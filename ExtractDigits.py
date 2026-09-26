@@ -11,6 +11,6 @@
 
 #Using list comprehension and set
 tup = [(15, 3), (3, 9), (1, 10), (99, 2)] #[(5, 6), (5, 7), (5, 8), (6, 10), (7, 13)] 
-temp = ''.join([str(i) for x in tup for i in x])
-output = [int(i) for i in set(temp)]
+temp = ''.join([str(i) for x in tup for i in x])             #Converts each number in all tuples to a string and join function joins all string numbers into one continuous string
+output = [int(i) for i in set(temp)]         #set(temp) removes duplicate digits.   ##[int(i) for i in set(temp)] - converts unique string digits back to integers
 print(output)
