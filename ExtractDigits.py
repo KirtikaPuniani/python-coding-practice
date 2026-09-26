@@ -40,6 +40,6 @@ tup = [(15, 3), (3, 9), (1, 10), (99, 2)]
 a = ''
 for x in tup:
     for y in x:
-        a += str(y)
-output = list(map(int, set(a)))
+        a += str(y)       #Adds each number as a string
+output = list(map(int, set(a)))        #set(a) - removes duplicate digits.   ##map function - converts unique string digits into integers
 print(output)
