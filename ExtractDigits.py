@@ -14,3 +14,12 @@ tup = [(15, 3), (3, 9), (1, 10), (99, 2)] #[(5, 6), (5, 7), (5, 8), (6, 10), (7,
 temp = ''.join([str(i) for x in tup for i in x])             #Converts each number in all tuples to a string and join function joins all string numbers into one continuous string
 output = [int(i) for i in set(temp)]         #set(temp) removes duplicate digits.   ##[int(i) for i in set(temp)] - converts unique string digits back to integers
 print(output)
+
+
+
+#Using map + chain.from_iterable + set
+from itertools import chain
+tup = [(15, 3), (3, 9), (1, 10), (99, 2)]
+x = map(str, chain.from_iterable(tup))         #chain.from_iterable(tup)flattens all tuples into a single sequence.    ##map() function converts each number to a string
+output = {d for n in x for d in n}       #Extracts individual digits and keeps only unique ones
+print(output)
