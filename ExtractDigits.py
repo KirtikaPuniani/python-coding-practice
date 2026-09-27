@@ -32,14 +32,3 @@ tup = [(15, 3), (3, 9), (1, 10), (99, 2)]
 reg = re.sub(r'[\[\]\(\), ]', '', str(tup))      #str() function converts tuple to string.    ##re.sub() removes brackets, commas and scpaces/
 output = [int(i) for i in set(reg)]          #set(reg) collects unique digit characters.   ##int(i) for i in converts them back to integers
 print(output)
-
-
-
-#Using nested loops + set
-tup = [(15, 3), (3, 9), (1, 10), (99, 2)]
-a = ''
-for x in tup:
-    for y in x:
-        a += str(y)       #Adds each number as a string
-output = list(map(int, set(a)))        #set(a) - removes duplicate digits.   ##map function - converts unique string digits into integers
-print(output)
