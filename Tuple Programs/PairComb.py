@@ -31,3 +31,11 @@ output = [(a, b) for a in x for b in y] + \
 print(str(output))
 
 
+
+#Using itertools.product()
+import itertools
+x = (4, 5)
+y = (7, 8)
+output = [(a, b) for a in x for b in y] + \
+      [(a, b) for a in y for b in x]
+print(str(output))
