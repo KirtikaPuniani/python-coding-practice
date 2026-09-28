@@ -17,3 +17,13 @@ res = list(chain(product(x, y),product(y, x)))       #product(x, y) creates all 
 #chain(product(...), product(...)): combines both forward and reverse combinations into a single iterable
 #list(chain(...)): converts that combined iterable into a list, storing all pair combinations in output
 print(str(res))
+
+
+
+
+#Using list comprehensions
+x = (4, 5)
+y = (7, 8)
+output = [(a, b) for a in x for b in y] + \
+      [(a, b) for a in y for b in x]
+print(str(output))
