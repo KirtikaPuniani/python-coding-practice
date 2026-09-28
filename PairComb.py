@@ -10,3 +10,8 @@
 # The combination of itertools.product() and itertools.chain() is the most concise and efficient approach to generate all pair combinations.
 # product(): creates Cartesian products between tuples.
 # chain(): merges the two product results into a single iterable.
+from itertools import chain, product
+x = (4, 5)
+y = (7, 8)
+output = list(chain(product(x, y),product(x, y)))
+print(str(output))
