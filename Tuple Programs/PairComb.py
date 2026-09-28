@@ -26,4 +26,8 @@ x = (4, 5)
 y = (7, 8)
 output = [(a, b) for a in x for b in y] + \
       [(a, b) for a in y for b in x]
+#[(a, b) for a in x for b in y]: generates all forward pairs (elements from the first tuple combined with the second)
+#[(a, b) for a in y for b in x]: generates all reverse pairs (elements from the second tuple combined with the first)
 print(str(output))
+
+
