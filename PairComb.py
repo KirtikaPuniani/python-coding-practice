@@ -7,3 +7,6 @@
 
 
 #Using itertools.chain() + product()
+# The combination of itertools.product() and itertools.chain() is the most concise and efficient approach to generate all pair combinations.
+# product(): creates Cartesian products between tuples.
+# chain(): merges the two product results into a single iterable.
