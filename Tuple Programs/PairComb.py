@@ -38,4 +38,6 @@ x = (4, 5)
 y = (7, 8)
 output = [(a, b) for a in x for b in y] + \
       [(a, b) for a in y for b in x]
+# [(a, b) for a in x for b in y]: generates all forward pair combinations.
+# [(a, b) for a in y for b in x]: generates all reverse pair combinations.
 print(str(output))
