@@ -13,5 +13,7 @@
 from itertools import chain, product
 x = (4, 5)
 y = (7, 8)
-output = list(chain(product(x, y),product(x, y)))
-print(str(output))
+res = list(chain(product(x, y),product(y, x)))       #product(x, y) creates all forward pair combinations.   and     product(y, x) creates all reverse pair combinations.
+#chain(product(...), product(...)): combines both forward and reverse combinations into a single iterable
+#list(chain(...)): converts that combined iterable into a list, storing all pair combinations in output
+print(str(res))
