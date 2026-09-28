@@ -41,3 +41,15 @@ output = [(a, b) for a in x for b in y] + \
 # [(a, b) for a in x for b in y]: generates all forward pair combinations.
 # [(a, b) for a in y for b in x]: generates all reverse pair combinations.
 print(str(output))
+
+
+
+#Using nested loop
+x = (4, 5)
+y = (7, 8)
+output = []
+for element_1 in x:
+    for element_2 in y:
+        output.append((element_1, element_2))
+        output.append((element_2, element_1))
+print(output)
