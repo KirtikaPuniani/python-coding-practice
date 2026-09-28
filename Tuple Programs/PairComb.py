@@ -50,6 +50,6 @@ y = (7, 8)
 output = []
 for element_1 in x:
     for element_2 in y:
-        output.append((element_1, element_2))
-        output.append((element_2, element_1))
+        output.append((element_1, element_2))       #Adds forward pair
+        output.append((element_2, element_1))       #Adds reverse pair
 print(output)
