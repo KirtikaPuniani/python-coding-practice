@@ -3,3 +3,7 @@
 # Example:
 # Input : t1 = (7, 2), t2 = (7, 8) 
 # Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)] 
+
+
+
+#Using itertools.chain() + product()
