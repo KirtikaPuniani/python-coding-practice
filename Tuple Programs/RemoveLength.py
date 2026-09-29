@@ -12,5 +12,5 @@ print(str(output))
 #Using filter + lambda + len
 x = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
 k = 1
-output = list(filter(lambda x: len(x) != k, x))
+output = list(filter(lambda x: len(x) != k, x))       #applies a filter function that keeps only the tuples whose length is not equal to k
 print(str(output))
