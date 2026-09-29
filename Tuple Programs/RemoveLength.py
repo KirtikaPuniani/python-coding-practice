@@ -21,7 +21,7 @@ print(str(output))
 x = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
 k = 1
 output = []
-for t in x:
+for t in x:          #Iterates through each tuple and appends it to res only if its length is not equal to k
     if len(t) != k:
         output.append(t)
 print(output)
