@@ -32,4 +32,5 @@ print(output)
 x = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
 k = 1
 output = list(map(lambda x: x, filter(lambda x: len(x) != k, x)))
+#list(map(lambda x: x, filter(lambda x: len(x) != k, x))): filters t1 to keep only tuples whose length is not k and returns them as a list
 print(output)
