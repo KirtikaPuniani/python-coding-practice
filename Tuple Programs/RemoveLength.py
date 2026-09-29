@@ -25,3 +25,11 @@ for t in x:          #Iterates through each tuple and appends it to res only if 
     if len(t) != k:
         output.append(t)
 print(output)
+
+
+
+#Using map and lambda function
+x = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
+k = 1
+output = list(map(lambda x: x, filter(lambda x: len(x) != k, x)))
+print(output)
