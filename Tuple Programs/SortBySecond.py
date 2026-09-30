@@ -1,5 +1,8 @@
 #Sort a List of Tuples by Second Item
-
+# Given a list of tuples, the task is to sort them based on their second element. Each tuple holds ordered data and sorting them by the second item helps organize values in a meaningful order.
+# For example:
+# Input: [(1, 3), (4, 1), (2, 2)]
+# Output: [(4, 1), (2, 2), (1, 3)]
 
 #Using itemgetter
 from operator import itemgetter 
