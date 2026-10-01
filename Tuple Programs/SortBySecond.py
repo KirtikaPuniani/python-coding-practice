@@ -27,3 +27,7 @@ print(a)
 
 
 #Using heapq.nsmallest
+import heapq
+a = [(7, 5), (3, 8), (2, 6)]
+output = heapq.nsmallest(len(a), a, key = lambda x: x[1])         #heapq.nsmallest() finds smallest tuples based on the key efficiently. It uses a heap internally, reducing unnecessary comparisons.
+print(output)
