@@ -6,10 +6,13 @@
 
 #Using itemgetter
 from operator import itemgetter 
-a = [(7, 5), (3, 8), (2, 6)]  
+a = [(7, 5), (3, 8), (2, 6)]
 output = sorted(a, key=itemgetter(1))        #itemgetter(1) retrieves the second item (1) from each tuple. It is more efficient than using a lambda function and sorted() sorts the list based on the second item of each tuple
 print(output)
 
 
 
 #Using sorted with lambda
+a = [(7, 5), (3, 8), (2, 6)]
+output = sorted(a, key = lambda x: x[1])
+print(output)
