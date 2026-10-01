@@ -22,5 +22,8 @@ print(output)
 
 #Using sort with lambda
 a = [(7, 5), (3, 8), (2, 6)]
-a.sort(key = lambda x: x[1])
+a.sort(key = lambda x: x[1])        #a.sort(key=lambda x: x[1]) sorts the list a in place based on the second item of each tuple and result is directly stored in the original list a and no new list is created
 print(a)
+
+
+#Using heapq.nsmallest
