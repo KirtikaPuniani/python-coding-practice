@@ -17,3 +17,10 @@ a = [(7, 5), (3, 8), (2, 6)]
 output = sorted(a, key = lambda x: x[1])
 #sorted(a, key=lambda x: x[1]) extract the second element (x[1]) from each tuple for comparison and list is returned in sorted order by the second item of each tuple
 print(output)
+
+
+
+#Using sort with lambda
+a = [(7, 5), (3, 8), (2, 6)]
+a.sort(key = lambda x: x[1])
+print(a)
