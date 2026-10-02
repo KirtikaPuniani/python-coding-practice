@@ -7,5 +7,5 @@
 tuple = [('apple', 6), ('banana', 8), ('orange', 2), ('strawberry', 4)]
 list = ['apple', 'orange', 'banana', 'strawberry']
 temp = dict(tuple)         #converts the list of tuples into a dictionary for quick key-value lookup
-output = [(key, temp[key]) for key in list]
+output = [(key, temp[key]) for key in list]          #creates a new list of tuples arranged according to the order in o1
 print(output)
