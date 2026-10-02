@@ -18,6 +18,6 @@ tuple = [('apple', 6), ('banana', 8), ('orange', 2), ('strawberry', 4), ('kiwi',
 list = ['apple', 'kiwi', 'orange', 'banana', 'strawberry']
 temp = {}
 for key, element in enumerate(list):
-    temp.setdefault(element, []).append(key)
-output = sorted(tuple, key = lambda element: temp[element[0]].pop())
+    temp.setdefault(element, []).append(key)         # Maps each name to its order index
+output = sorted(tuple, key = lambda element: temp[element[0]].pop())        #Sorts tuples by that index
 print(output)
