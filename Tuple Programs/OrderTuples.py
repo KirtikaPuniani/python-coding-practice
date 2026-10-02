@@ -9,3 +9,15 @@ list = ['apple', 'orange', 'banana', 'strawberry']
 temp = dict(tuple)         #converts the list of tuples into a dictionary for quick key-value lookup
 output = [(key, temp[key]) for key in list]          #creates a new list of tuples arranged according to the order in o1
 print(output)
+
+
+
+
+#Using setdefault + sorted + lambda
+tuple = [('apple', 6), ('banana', 8), ('orange', 2), ('strawberry', 4), ('kiwi', 10)]
+list = ['apple', 'kiwi', 'orange', 'banana', 'strawberry']
+temp = {}
+for key, element in enumerate(list):
+    temp.setdefault(element, []).append(key)
+output = sorted(tuple, key = lambda element: temp[element[0]].pop())
+print(output)
