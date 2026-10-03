@@ -21,3 +21,11 @@ for key, element in enumerate(list):
     temp.setdefault(element, []).append(key)         # Maps each name to its order index
 output = sorted(tuple, key = lambda element: temp[element[0]].pop())        #Sorts tuples by that index
 print(output)
+
+
+#Using reduce() Function
+from functools import reduce
+tuple = [('apple', 6), ('banana', 8), ('orange', 2), ('strawberry', 4), ('kiwi', 10)]
+list = ['apple', 'kiwi', 'orange', 'banana', 'strawberry']
+output = reduce(lambda acc, key: acc + [ele for ele in tuple if ele[0] == key], list, [])
+print(output)
