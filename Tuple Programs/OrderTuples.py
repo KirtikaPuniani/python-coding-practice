@@ -27,5 +27,5 @@ print(output)
 from functools import reduce
 tuple = [('apple', 6), ('banana', 8), ('orange', 2), ('strawberry', 4), ('kiwi', 10)]
 list = ['apple', 'kiwi', 'orange', 'banana', 'strawberry']
-output = reduce(lambda acc, key: acc + [ele for ele in tuple if ele[0] == key], list, [])
+output = reduce(lambda acc, key: acc + [ele for ele in tuple if ele[0] == key], list, [])          #iterates through each element in l, finds matching tuples in t, and accumulates them in order
 print(output)
