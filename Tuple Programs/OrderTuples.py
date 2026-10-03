@@ -36,5 +36,5 @@ print(output)
 #Using itemgetter()
 from operator import itemgetter
 tuple = [('apple', 6), ('banana', 8), ('orange', 2), ('strawberry', 4), ('kiwi', 10)]
-list = sorted(tuple, key = itemgetter(1))
+list = sorted(tuple, key = itemgetter(1))         #sorts the list based on the second element (index 1) of each tuple
 print(list)
