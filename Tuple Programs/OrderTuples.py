@@ -1,5 +1,5 @@
 #Order tuples by list
-# Given a list of tuples, our task is to reorder it according to the sequence defined in another list. This can be useful in data processing, sorting, and mapping tasks
+#Given a list of tuples, our task is to reorder it according to the sequence defined in another list. This can be useful in data processing, sorting, and mapping tasks
 
 
 #Using dict + list comprehension
