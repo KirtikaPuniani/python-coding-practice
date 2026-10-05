@@ -23,3 +23,13 @@ output = tuple(x for sublist in tup for x in sublist)
 # x extracts individual elements.
 # tuple() converts the flat sequence into a tuple.
 print(output)
+
+
+
+
+#Using functools.reduce()
+from functools import reduce
+tup = ([5, 6], [6, 7, 8, 9], [3])
+output = tuple(reduce(lambda x, y: x + y, tup))       
+#reduce(lambda x, y: x + y, tup) combines all sublists in tup by repeatedly concatenating pairs of sublists into a single list and tuple() converts the result into a flattened tuple of elements
+print(output)
