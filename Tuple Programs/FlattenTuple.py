@@ -33,3 +33,11 @@ tup = ([5, 6], [6, 7, 8, 9], [3])
 output = tuple(reduce(lambda x, y: x + y, tup))       
 #reduce(lambda x, y: x + y, tup) combines all sublists in tup by repeatedly concatenating pairs of sublists into a single list and tuple() converts the result into a flattened tuple of elements
 print(output)
+
+
+
+
+#Using sum()
+tup = ([5, 6], [6, 7, 8, 9], [3])
+output = tuple(sum(tup, []))   #sum(tup, []) concatenates all sublists in tup into a single list, starting with an empty list [], and tuple() converts the result into a flattened tuple of elements
+print(output)
