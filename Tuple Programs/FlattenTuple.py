@@ -10,5 +10,16 @@
 #chain.from_iterable() combines multiple inner lists into a single sequence without creating intermediate lists. It is particularly suitable for large datasets, as it lazily iterates over elements, reducing memory consumption
 from itertools import chain
 tup = ([5, 6], [6, 7, 8, 9], [3])
-output = tuple(chain.from_iterable(tup))
+output = tuple(chain.from_iterable(tup))           #chain.from_iterable(tup) - iterates through each sublist inside tup and extracts their elements in sequence AND tuple() converts the flattened sequence into a tuple
+print(output)
+
+
+
+#Using list comprehension
+tup = ([5, 6], [6, 7, 8, 9], [3])
+output = tuple(x for sublist in tup for x in sublist)
+# for sublist in tup loops through each inner list.
+# for x in sublist accesses each element inside the sublist.
+# x extracts individual elements.
+# tuple() converts the flat sequence into a tuple.
 print(output)
