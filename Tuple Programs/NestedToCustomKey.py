@@ -29,3 +29,12 @@ output = list(map(lambda sub: {'key': sub[0], 'value': sub[1], 'id': sub[2]}, x)
 #lambda sub: {...} defines an anonymous function that takes each tuple (sub) and returns a dictionary.
 #list(map(...)) converts the map object into a list of dictionaries.
 print(str(output))
+
+
+
+#Using for loop
+x = ((4, 'Gfg', 10), (3, 'is', 8), (6, 'Best', 10))
+output = []
+for sub in x:
+    output.append({'key': sub[0], 'value': sub[1], 'id': sub[2]})
+print(str(output))
