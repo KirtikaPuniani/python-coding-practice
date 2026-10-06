@@ -20,3 +20,12 @@ print(output)
 x = ((4, 'Gfg', 10), (3, 'is', 8), (6, 'Best', 10))
 output = [{'key': sub[0], 'value': sub[1], 'id': sub[2]} for sub in x]       #for sub in a iterates through each tuple in the nested structure. sub[0], sub[1], sub[2] extract individual elements from each tuple
 print(str(output))
+
+
+#Using map and lambda
+x = ((4, 'Gfg', 10), (3, 'is', 8), (6, 'Best', 10))
+output = list(map(lambda sub: {'key': sub[0], 'value': sub[1], 'id': sub[2]}, x))     
+#map() applies a function to each element in the iterable a.
+#lambda sub: {...} defines an anonymous function that takes each tuple (sub) and returns a dictionary.
+#list(map(...)) converts the map object into a list of dictionaries.
+print(str(output))
