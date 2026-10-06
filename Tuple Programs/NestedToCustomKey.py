@@ -14,3 +14,9 @@ output = [dict(zip(keys, sub)) for sub in x]
 #dict() converts the paired values into a dictionary.
 #[dict(zip(keys, sub)) for sub in a] applies this logic to every tuple in a and stores results in a list.
 print(output)
+
+
+#Using list copmprehension
+x = ((4, 'Gfg', 10), (3, 'is', 8), (6, 'Best', 10))
+output = [{'key': sub[0], 'value': sub[1], 'id': sub[2]} for sub in x]       #for sub in a iterates through each tuple in the nested structure. sub[0], sub[1], sub[2] extract individual elements from each tuple
+print(str(output))
