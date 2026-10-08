@@ -13,3 +13,19 @@
 
 
 #Using bisect
+import bisect
+def binary_search(arr, key):
+    i = bisect.bisect_left(arr, x)
+    if i != len(arr) and arr[i] == x:
+        return i
+    else:
+        return -1
+
+arr = [2, 3, 4, 10, 40]
+x = 10
+result = binary_search(arr, x)
+
+if result != -1:
+    print("Element is present at index", result)
+else:
+    print("Element is not present in array")
