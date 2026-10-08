@@ -9,3 +9,7 @@
 # 3. If the key is smaller: search the left half.
 # 4. If the key is larger: search the right half.
 # 5. Repeat until the element is found or the search space is empty.
+
+
+
+#Using bisect
