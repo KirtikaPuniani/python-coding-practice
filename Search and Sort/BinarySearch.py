@@ -31,3 +31,26 @@ else:
     print("Element is not present in array")
     
     
+
+#Iterative Binary Search
+def binary_search_iterative(arr, key):
+    low = 0
+    high = len(arr) - 1
+    
+    while low <= high:
+        mid = (low + high) // 2
+        
+        if arr[mid] == key:
+            return mid
+        elif arr[mid] < key:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+arr = [2, 3, 4, 10, 40]
+key = 10
+output = binary_search_iterative(arr, key)
+if output != -1:
+    print("Element is present at index", output)
+else:
+    print("Element is not present in array")
