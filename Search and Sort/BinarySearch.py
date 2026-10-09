@@ -15,8 +15,8 @@
 #Using bisect
 import bisect
 def binary_search(arr, key):
-    i = bisect.bisect_left(arr, x)        #finds the position where x should be inserted to keep arr sorted
-    if i != len(arr) and arr[i] == x:      #Checks if x exists at that position; if yes, returns the index
+    i = bisect.bisect_left(arr, key)        #finds the position where key should be inserted to keep arr sorted
+    if i != len(arr) and arr[i] == key:      #Checks if key exists at that position; if yes, returns the index
         return i
     else:
         return -1       #Returns -1 if the element is not found
@@ -29,3 +29,5 @@ if result != -1:
     print("Element is present at index", result)
 else:
     print("Element is not present in array")
+    
+    
