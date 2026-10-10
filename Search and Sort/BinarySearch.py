@@ -32,3 +32,27 @@ else:
     
     
 
+#Iterative Binary Search
+def binary_search_iterative(arr, key):
+    low = 0
+    high = len(arr) - 1
+    
+    while low <= high:       #Using a while loop to impolement iterative binary search. Initialize low and high pointers to define the search space. While low is less than or equal to high, calculate the middle index 
+#and compare the middle element with the key. If they are equal, return the index. If the middle element is less than the key, update low to mid + 1 to search in the right half. Otherwise, update high to mid - 1 to search in 
+#the left half. Repeat until the element is found or the search space is empty.
+        mid = (low + high) // 2       #calculates the middle index by taking the average of low and high pointers. The '//' operator performs integer division, ensuring that mid is an integer value.
+        
+        if arr[mid] == key:        #If the middle element is equal to the key, it means the element has been found, and the function returns the index mid.
+            return mid
+        elif arr[mid] < key:       #If the middle element is less than the key, it means the key must be in the right half of the array. Therefore, we update low to mid + 1 to search in the right half.
+            low = mid + 1
+        else:                      #If the middle element is greater than the key, it means the key must be in the left half of the array. Therefore, we update high to mid - 1 to search in the left half.
+            high = mid - 1
+    return -1          #returns -1 if the element is not found in the array after the while loop ends.
+arr = [2, 3, 4, 10, 40]
+key = 10
+output = binary_search_iterative(arr, key)
+if output != -1:
+    print("Element is present at index", output)
+else:
+    print("Element is not present in array")
