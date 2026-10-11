@@ -82,10 +82,10 @@ if result != -1:
     print("Element is present at index", result)
 else:
     print("Element is not present in array")
-Explanation:
 
-Using recursion to implement binary search on a sorted list.
-Calculates the middle index and compares its value with x.
-If x matches the middle element, returns its index.
-If x is smaller, searches the left half; if larger, searches the right half.
-Returns -1 if the element is not found.
+# Explanation:
+# Using recursion to implement binary search on a sorted list.
+# Calculates the middle index and compares its value with x.
+# If x matches the middle element, returns its index.
+# If x is smaller, searches the left half; if larger, searches the right half.
+# Returns -1 if the element is not found.
