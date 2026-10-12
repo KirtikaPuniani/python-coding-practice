@@ -12,3 +12,9 @@
 # Start from the leftmost element of arr[] and one by one compare x with each element of arr[].
 # If x matches with an element, return the index.
 # If x doesn't match with any of the elements, return -1.
+
+
+
+
+#Using iterative approach to implement linear search. 
+#The function takes an array and a key as input, and iterates through the array to find the key. If the key is found, it returns the index; otherwise, it returns -1.
