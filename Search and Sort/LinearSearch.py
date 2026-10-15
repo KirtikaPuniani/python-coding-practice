@@ -68,3 +68,8 @@ lst = ["apple", "banana", "cherry", "date", "elderberry"]
 pat = "an"
 res = regex_search(lst, pat)
 print(res)
+
+# Explanation:
+# re.compile(pat) compiles the search pattern.
+# Each list element is checked using reg.search(ele).
+# Returns the matching element and its index if found; otherwise, returns a message saying not found.
