@@ -27,3 +27,9 @@ def insertionSort(arr):
 arr = [12, 11, 13, 5, -1]
 insertionSort(arr)
 print(arr)
+
+# Explanation:
+# for i in range(1, n): Iterates through the array from the second element onward.
+# key = arr[i]: Stores the current element to be inserted in the sorted portion.
+# Inner while loop: Shifts elements greater than key one position to the right.
+# arr[j + 1] = key: Inserts key into its correct sorted position.
