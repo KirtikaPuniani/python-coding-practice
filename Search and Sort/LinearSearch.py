@@ -51,3 +51,7 @@ if res != -1:
     print("Element", x, "found at index", res)
 else:
     print("Element", x, "not found in the list")
+    
+    
+
+#Using RegEx Method
