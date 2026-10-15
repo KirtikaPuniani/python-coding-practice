@@ -55,3 +55,16 @@ else:
     
 
 #Using RegEx Method
+import re
+
+def regex_search(lst, pat):
+    reg = re.compile(pat)
+    for i, ele in enumerate(lst):
+        if reg.search(ele):
+            return "Pattern found in element '" + ele + "' at index " + str(i)
+    return "Pattern not found in the list"
+
+lst = ["apple", "banana", "cherry", "date", "elderberry"]
+pat = "an"
+res = regex_search(lst, pat)
+print(res)
