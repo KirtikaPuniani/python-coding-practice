@@ -33,3 +33,8 @@ def recursive_insertion_sort(arr, n):
     # Insert last into its correct position
     arr[j + 1] = last
 
+#sample usage
+arr = [12, 11, 13, 5, 6]
+n = len(arr)
+recursive_insertion_sort(arr, n)
+print("Sorted array is:", arr)
