@@ -12,3 +12,24 @@
 # Shift all elements greater than last one position ahead.
 # Insert last into its correct position.
 # Repeat this process until the entire array is sorted
+
+def recursive_insertion_sort(arr, n):
+    # Base case: If the array size is 1 or less, it's already sorted
+    if n <= 1:
+        return
+
+    # Recursively sort the first n-1 elements
+    recursive_insertion_sort(arr, n - 1)
+
+    # Store the last element (the nth element)
+    last = arr[n - 1]
+    j = n - 2
+
+    # Shift elements of arr[0..n-2], that are greater than last, to one position ahead
+    while j >= 0 and arr[j] > last:
+        arr[j + 1] = arr[j]
+        j -= 1
+
+    # Insert last into its correct position
+    arr[j + 1] = last
+
