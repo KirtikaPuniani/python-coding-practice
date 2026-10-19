@@ -1,0 +1,2 @@
+#QuickSort is a sorting algorithm based on the Divide and Conquer that picks an element as a pivot and partitions the given array around the picked pivot by placing the pivot in its correct position in the sorted array. 
+#There are mainly three steps in the algorithm:
