@@ -4,3 +4,5 @@
 #2. Partition the Array: Rearrange elements so that those smaller than the pivot are placed to its left and those greater are placed to its right. The pivot then moves to its correct sorted position.
 #3. Recursive Sorting: Recursively apply the same process to the left and right subarrays until all elements are sorted.
 #4. Base Case: When a subarray has one or no element, it is already sorted.
+# In this implementation, last element is chosen as the pivot, and the partitioning ensures all smaller elements are on one side and larger on the other, achieving sorting efficiently. Let's understand the working of partition 
+# algorithm with the help of the following example:
