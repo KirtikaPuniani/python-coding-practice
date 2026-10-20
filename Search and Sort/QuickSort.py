@@ -41,6 +41,10 @@ quick_sort(arr, 0, n - 1)
 print("Sorted array is:", arr)
 
 
+
+
+
+
 #Using list comprehension to implement quicksort. 
 # The function takes an array as input and recursively partitions it into subarrays of elements less than, equal to, and greater than the pivot. It then concatenates the sorted subarrays to produce the final sorted array.
 def quick_sort_list_comprehension(arr):
