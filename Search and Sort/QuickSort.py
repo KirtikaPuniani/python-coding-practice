@@ -39,3 +39,18 @@ arr = [10, 7, 8, 9, 1, 5]
 n = len(arr)
 quick_sort(arr, 0, n - 1)
 print("Sorted array is:", arr)
+
+
+#Using list comprehension to implement quicksort. 
+# The function takes an array as input and recursively partitions it into subarrays of elements less than, equal to, and greater than the pivot. It then concatenates the sorted subarrays to produce the final sorted array.
+def quick_sort_list_comprehension(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[-1]  # Choosing the last element as pivot
+        less_than_pivot = [x for x in arr[:-1] if x <= pivot]
+        greater_than_pivot = [x for x in arr[:-1] if x > pivot]
+        return quick_sort_list_comprehension(less_than_pivot) + [pivot] + quick_sort_list_comprehension(greater_than_pivot)
+arr = [10, 7, 8, 9, 1, 5]
+sorted_arr = quick_sort_list_comprehension(arr)
+print("Sorted array is:", sorted_arr)
