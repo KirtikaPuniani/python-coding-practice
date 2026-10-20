@@ -4,5 +4,13 @@
 #2. Partition the Array: Rearrange elements so that those smaller than the pivot are placed to its left and those greater are placed to its right. The pivot then moves to its correct sorted position.
 #3. Recursive Sorting: Recursively apply the same process to the left and right subarrays until all elements are sorted.
 #4. Base Case: When a subarray has one or no element, it is already sorted.
-# In this implementation, last element is chosen as the pivot, and the partitioning ensures all smaller elements are on one side and larger on the other, achieving sorting efficiently. Let's understand the working of partition 
-# algorithm with the help of the following example:
+
+# In this implementation, last element is chosen as the pivot, and the partitioning ensures all smaller elements are on one side and larger on the other, achieving sorting efficiently.
+# Algorithm Steps of QuickSort
+
+# 1. Input: Array A, starting index low, ending index high
+# 2. If low < high, then Partition: Find pivot index p = partition(A, low, high)
+#                        Recur: Apply QuickSort to left subarray -> quickSort(A, low, p - 1)
+#                        Apply QuickSort to right subarray -> quickSort(A, p + 1, high)
+# 3. Else: Stop (base case - subarray of size ≤ 1 is already sorted)
+# 4. Output: Sorted array A
