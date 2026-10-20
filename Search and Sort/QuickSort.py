@@ -54,3 +54,9 @@ def quick_sort_list_comprehension(arr):
 arr = [10, 7, 8, 9, 1, 5]
 sorted_arr = quick_sort_list_comprehension(arr)
 print("Sorted array is:", sorted_arr)
+
+# Explanation:
+# quick_sort() selects the first element as pivot.
+# List comprehensions split elements into left (smaller) and right (greater or equal).
+# The function recursively sorts both lists.
+# Sorted parts are merged as left + pivot + right to form the final sorted array.
