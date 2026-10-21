@@ -23,7 +23,7 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]  # Place pivot in the correct position
     return i + 1
 arr = [10, 7, 8, 9, 1, 5]
-partition(arr)
+partition(arr, 0, len(arr) - 1)
 print("Array after partitioning:", arr)
 
 
