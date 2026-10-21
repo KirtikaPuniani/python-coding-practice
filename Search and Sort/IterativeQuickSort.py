@@ -30,3 +30,18 @@ print("Array after partitioning:", arr)
 
 
 
+#Iterative Quick Sort Function
+# The iterative quick sort function uses a stack to manage the subarrays that need to be sorted. It starts by pushing the initial range of the array onto the stack. In each iteration, it pops a range from the stack, partitions that subarray, and pushes the resulting left and right subarrays back onto the stack for further sorting. This continues until the stack is empty, indicating that the entire array has been sorted.
+def iterative_quick_sort(arr):
+    stack = []
+    stack.append((0, len(arr) - 1))  # Push initial range onto the stack
+
+    while stack:
+        low, high = stack.pop()  # Pop a range from the stack
+        if low < high:
+            pi = partition(arr, low, high)  # Partition the subarray
+            stack.append((low, pi - 1))  # Push left subarray onto the stack
+            stack.append((pi + 1, high))  # Push right subarray onto the stack
+arr = [10, 7, 8, 9, 1, 5]
+iterative_quick_sort(arr)
+print("Sorted array is:", arr)
