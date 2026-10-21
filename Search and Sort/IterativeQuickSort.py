@@ -1,2 +1,3 @@
 #Iterative Quick Sort
 #Iterative Quick Sort is a non-recursive implementation of the Quick Sort algorithm. It uses an explicit stack to keep track of subarrays that need to be sorted, instead of relying on the call stack used in the recursive version. This approach can be more memory-efficient and avoids potential stack overflow issues for large arrays.
+#Quicksort is one of the most efficient sorting algorithms and is commonly implemented using recursion. However, recursion can cause stack overflow errors when dealing with very large datasets. To overcome this, we can use an iterative version of Quicksort that replaces recursive calls with an explicit stack to manage subarrays
