@@ -93,3 +93,43 @@ def merge_sort(arr, l, r):
 arr = [38, 27, 43, 10]
 merge_sort(arr, 0, len(arr) - 1)
 print("Sorted array is:", arr)
+
+
+
+
+# Divide:
+# In mergeSort(arr, l, r), the condition if l < r: ensures the array is divided only when it has more than one element.
+# The midpoint is calculated as m = l + (r - l) // 2.
+# The array is divided into two halves by recursive calls:
+# mergeSort(arr, l, m) → sorts the left half.
+# mergeSort(arr, m + 1, r) → sorts the right half.
+
+
+# Conquer:
+# Each recursive call continues dividing until the subarrays have a single element (automatically sorted).
+# Once divided, recursion starts returning — at each level, the two sorted halves are ready to be merged.
+
+
+
+# Merge:
+# The merge(arr, l, m, r) function merges the two sorted halves.
+# n1 = m - l + 1 and n2 = r - m calculate the sizes of the left and right subarrays.
+# Temporary arrays L and R store these elements using loops.
+# Variables i, j, and k are initialized for left array, right array, and merged array indices.
+# The loop while i < n1 and j < n2: compares L[i] and R[j], placing the smaller into arr[k].
+# After one list is exhausted, remaining elements from L or R are copied back into arr.
+# This merging continues recursively until the full array becomes sorted.
+
+
+
+# Advantages of Merge Sort
+# Efficient for large datasets.
+# Guarantees O(n log n) performance.
+# Stable sorting (preserves order of equal elements).
+# Works well with linked lists.
+
+
+
+# Disadvantages
+# Requires additional space (O(n)).
+# Slower for small datasets compared to simpler algorithms like Insertion Sort.
