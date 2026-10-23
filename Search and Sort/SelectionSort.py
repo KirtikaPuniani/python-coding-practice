@@ -18,3 +18,11 @@ def selection_sort(arr):
 arr = [64, 25, 12, 22, 11]
 selection_sort(arr)
 print("Sorted array is:", arr)
+
+
+# Explanation:
+# for ind in range(size) (Outer loop): Iterates through each index, treating it as the start of the unsorted portion.
+# min_index = ind: Assumes the current index holds the smallest element.
+# for j in range(ind + 1, size) (Inner loop): Finds the index of the minimum element in the unsorted part of the array.
+# if array[j] < array[min_index]: Updates min_index whenever a smaller element is found.
+# Swap step: Exchanges the smallest found element with the first element of the unsorted section.
