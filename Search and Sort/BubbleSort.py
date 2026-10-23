@@ -8,3 +8,18 @@
 # After each full pass, the largest unsorted element "bubbles up" to its correct position at the end.
 # Repeat this process for the remaining unsorted portion of the list.
 # The algorithm stops early if no swaps occur in a pass, meaning the array is already sorted.
+
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        swapped = False  # Flag to check if any swaps occurred in this pass
+        for j in range(0, n - i - 1):  # Last i elements are already sorted
+            if arr[j] > arr[j + 1]:  # Compare adjacent elements
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]  # Swap if they are in the wrong order
+                swapped = True  # Set flag to True indicating a swap occurred
+        if not swapped:  # If no swaps occurred, the array is already sorted
+            break
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print("Sorted array is:", arr)
