@@ -16,3 +16,50 @@
     # Repeat: The process continues until the entire array is merged into one sorted array.
 
 
+def merge(arr, left, mid, right):
+    # Create temporary arrays to hold the left and right subarrays
+    left_subarray = arr[left:mid + 1]
+    right_subarray = arr[mid + 1:right + 1]
+
+    # Initialize pointers for left, right, and merged subarrays
+    i = 0  # Pointer for left_subarray
+    j = 0  # Pointer for right_subarray
+    k = left  # Pointer for merged array
+
+    # Merge the two subarrays back into the original array
+    while i < len(left_subarray) and j < len(right_subarray):
+        if left_subarray[i] <= right_subarray[j]:
+            arr[k] = left_subarray[i]
+            i += 1
+        else:
+            arr[k] = right_subarray[j]
+            j += 1
+        k += 1
+
+    # Copy any remaining elements from the left subarray, if any
+    while i < len(left_subarray):
+        arr[k] = left_subarray[i]
+        i += 1
+        k += 1
+
+    # Copy any remaining elements from the right subarray, if any
+    while j < len(right_subarray):
+        arr[k] = right_subarray[j]
+        j += 1
+        k += 1
+def iterative_merge_sort(arr):
+    n = len(arr)
+    # Start with subarrays of size 1 and double the size in each iteration
+    size = 1
+    while size < n:
+        # Merge subarrays in pairs
+        for left in range(0, n, 2 * size):
+            mid = min(left + size - 1, n - 1)
+            right = min(left + 2 * size - 1, n - 1)
+            if mid < right:  # Only merge if there are two subarrays to merge
+                merge(arr, left, mid, right)
+        size *= 2
+arr = [38, 27, 43, 3, 9, 82, 10]
+print("Original array:", arr)
+iterative_merge_sort(arr)
+print("Sorted array:", arr)
