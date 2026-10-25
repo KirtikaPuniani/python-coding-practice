@@ -63,3 +63,26 @@ arr = [38, 27, 43, 3, 9, 82, 10]
 print("Original array:", arr)
 iterative_merge_sort(arr)
 print("Sorted array:", arr)
+
+
+# Explanation:
+
+# Divide
+
+# iterativeMergeSort(): Treats the array as sorted subarrays of size 1.
+# curr_size: Defines the size of subarrays to be merged in each pass.
+# Bottom-up approach: Doubles curr_size in each iteration (1,2,4,8...).
+# Outer loop (while curr_size < n): Runs until the array is completely merged.
+# Conquer
+
+# iterativeMergeSort(): Divides the array into pairs of subarrays for merging.
+# left_start: Marks the starting index of the current pair of subarrays.
+# merge(): Called to combine each pair (left_start…mid and mid+1…right_end).
+# left_start += 2 * curr_size: Moves to the next pair after each merge.
+# curr_size *= 2: Doubles subarray size after each full pass.
+# Merge
+
+# merge(): Combines two sorted subarrays into one sorted segment.
+# left and right arrays: Temporary lists holding elements from both halves.
+# Comparison step: Inserts smaller elements into the main array in sorted order.
+# Remaining elements: Appended from whichever subarray is left.
