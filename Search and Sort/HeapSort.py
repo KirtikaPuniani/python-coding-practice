@@ -11,3 +11,36 @@
 #   Replace it with the last item of the heap followed by reducing the size of heap by one. Finally, heapify the root of the tree.
 #3. Repeat step 2 while the size of the heap is greater than 1.
 
+
+#Algorithm Steps:
+#1. Build a max heap from the input data.
+#2. At this point, the largest item is stored at the root of the heap.
+#3. Replace it with the last item of the heap followed by reducing the size of heap by one. Finally, heapify the root of the tree.
+#4. Repeat step 2 while the size of the heap is greater than 1.
+
+#How It Works:
+#1. The algorithm starts by building a max heap from the input data. A max heap is a complete binary tree where the value of each node is greater than or equal to the values of its children. This ensures that the largest 
+# element is always at the root of the heap.
+#2. Once the max heap is built, the algorithm repeatedly swaps the root of the heap (the largest element) with the last element of the heap, effectively removing it from the heap. The size of the heap is then reduced by one, 
+# and the heap property is restored by calling the heapify function
+
+# Step 1: Represent the Array as a Binary Tree
+    # For an array of size n,
+    # Root is at index 0
+    # Left child of node i: 2*i + 1
+    # Right child of node i: 2*i + 2
+    # Visualize-the-array-as-a-complete-binary-tree
+    # Array as Binary Tree
+
+
+# Step 2: Build a Max Heap
+
+    # Convert the array into a max heap where each parent is larger than its children.
+
+
+# Step 3: Sort the array by placing largest element at end of unsorted array.
+    # Below are the detailed steps to sort the array:
+    # Remove-from-Max-Heap-2.webpRemove-from-Max-Heap-2.webp
+    # Swap the root (maximum) with the last element.
+    # Reduce heap size and heapify the root again.
+    # Repeat until the heap has one element left.
