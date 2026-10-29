@@ -23,3 +23,39 @@
     # 4. Create an empty outputArray of size N.
     # 5. Traverse input from the end and place each element at countArray[element] -1.
     # 6. Decrement countArray[element] after each placement.
+    
+
+def counting_sort(inputArray):
+    # Step 1: Find the maximum element in the input array
+    maxElement = max(inputArray)
+
+    # Step 2: Initialize countArray of size maxElement + 1 with all zeros
+    countArray = [0] * (maxElement + 1)
+
+    # Step 3: Store the frequency of each element in countArray
+    for element in inputArray:
+        countArray[element] += 1
+
+    # Step 4: Convert countArray into prefix sum
+    for i in range(1, len(countArray)):
+        countArray[i] += countArray[i - 1]
+
+    # Step 5: Create an empty outputArray of size N
+    outputArray = [0] * len(inputArray)
+
+    # Step 6: Traverse input from the end and place each element at its correct position
+    for i in range(len(inputArray) - 1, -1, -1):
+        element = inputArray[i]
+        outputIndex = countArray[element] - 1
+        outputArray[outputIndex] = element
+        countArray[element] -= 1
+
+    # Step 7: Copy output back to the input array
+    for i in range(len(inputArray)):
+        inputArray[i] = outputArray[i]
+    
+    return inputArray
+
+arr = [4, 2, 2, 8, 3, 3, 1]
+sorted_arr = counting_sort(arr)
+print("Sorted array:", sorted_arr)
