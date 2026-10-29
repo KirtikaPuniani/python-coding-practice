@@ -15,3 +15,11 @@
     # 5. Convert countArray into prefix sum each index now shows the final position of that element in the sorted order.
     # 6. Build the output array by iterating the input array from the end (to maintain stability).
     # 7. Copy output back to the input array.
+    
+#Algorithm
+    # 1. Create a count array "countArray[max(input)+1]" initialized to 0.
+    # 2. For each element in inputArray, increment countArray[element].
+    # 3. Compute prefix sums in countArray.
+    # 4. Create an empty outputArray of size N.
+    # 5. Traverse input from the end and place each element at countArray[element] -1.
+    # 6. Decrement countArray[element] after each placement.
