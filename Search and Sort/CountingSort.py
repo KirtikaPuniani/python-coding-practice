@@ -59,3 +59,11 @@ def counting_sort(inputArray):
 arr = [4, 2, 2, 8, 3, 3, 1]
 sorted_arr = counting_sort(arr)
 print("Sorted array:", sorted_arr)
+
+
+
+
+
+
+# Counting Sort Using collections.Counter
+# The traditional Counting Sort manually counts occurrences and builds prefix sums using arrays. Python's collections.Counter offers a simpler way to achieve the same result, it automatically counts element frequencies.
