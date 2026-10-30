@@ -89,3 +89,8 @@ def counting_sort_counter(inputArray):
 arr = [4, 2, 2, 8, 3, 3, 1]
 sorted_arr = counting_sort_counter(arr)
 print("Sorted array:", sorted_arr)
+
+# Explanation:
+# Counter(arr): counts occurrences of each number.
+# sorted(count.keys()): gives sorted unique values.
+# [num] * count[num]: repeats each number by its count.
