@@ -67,3 +67,7 @@ print("Sorted array:", sorted_arr)
 
 # Counting Sort Using collections.Counter
 # The traditional Counting Sort manually counts occurrences and builds prefix sums using arrays. Python's collections.Counter offers a simpler way to achieve the same result, it automatically counts element frequencies.
+# The logic remains the same:
+# Count how often each element appears.
+# Arrange elements in sorted order based on their counts.
+# Using Counter, we skip manual array handling and directly rebuild the sorted output by iterating over sorted keys.
