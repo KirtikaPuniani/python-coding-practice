@@ -71,3 +71,21 @@ print("Sorted array:", sorted_arr)
 # Count how often each element appears.
 # Arrange elements in sorted order based on their counts.
 # Using Counter, we skip manual array handling and directly rebuild the sorted output by iterating over sorted keys.
+from collections import Counter
+def counting_sort_counter(inputArray):
+    # Count the frequency of each element
+    count = Counter(inputArray)
+    
+    # Get the sorted keys (unique elements in sorted order)
+    sorted_keys = sorted(count.keys())
+    
+    # Rebuild the sorted array based on counts
+    outputArray = []
+    for key in sorted_keys:
+        outputArray.extend([key] * count[key])
+    
+    return outputArray
+
+arr = [4, 2, 2, 8, 3, 3, 1]
+sorted_arr = counting_sort_counter(arr)
+print("Sorted array:", sorted_arr)
