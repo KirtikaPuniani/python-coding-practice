@@ -26,3 +26,35 @@
 #     Compare arr[2] (9) with arr[1] (5): 9 > 5 → no swap
 #     Compare arr[3] (3) with arr[2] (9): 3 < 9 → swap → [1, 5, 3, 9]
 #     Compare arr[2] (3) with arr[1] (5): 3 < 5 → swap → [1, 3, 5, 9]. Result after gap=1: [1, 3, 5, 9] (sorted).
+
+
+#Using Ciura Sequence for gap values: [701, 301, 132, 57, 23, 10, 4, 1]
+    # This method uses a predefined sequence of gaps known as the Ciura sequence, which has been found to perform well in practice. The sequence is: 701, 301, 132, 57, 23, 10, 4, 1. The algorithm starts with the largest gap 
+    # and reduces it according to this sequence until it reaches 1. The array is first sorted using the largest gap, then the next largest, and so on, until the final pass with a gap of 1, which is a standard insertion sort ensuring 
+    # that the array is fully sorted to their correct positions faster than a simple nearest neighbor exchange.
+def shell_sort(arr):
+    n = len(arr)
+    # Ciura gap sequence
+    gaps = [701, 301, 132, 57, 23, 10, 4, 1]
+
+    for gap in gaps:
+        # Perform a gapped insertion sort for this gap size.
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            # Shift earlier gap-sorted elements up until the correct location for arr[i] is found
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            # Put temp (the original arr[i]) in its correct location
+            arr[j] = temp
+arr = [12, 34, 54, 2, 3]
+print("Original array:", arr)
+shell_sort(arr)
+print("Sorted array:", arr)
+
+# Explanation:
+    # gaps = [...] predefined Ciura gaps (large -> small) and for g in gaps: iterate each gap (skip gaps ≥ n).
+    # for i in range(g, n): for each index in the gapped group and t = a[i]; j = i hold current value and index.
+    # while j >= g and a[j-g] > t: shift larger g-spaced elements right.
+    # a[j] = t insert value into correct gapped position and repeat for next gap until gap = 1 completes final pass.
