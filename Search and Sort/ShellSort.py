@@ -58,3 +58,10 @@ print("Sorted array:", arr)
     # for i in range(g, n): for each index in the gapped group and t = a[i]; j = i hold current value and index.
     # while j >= g and a[j-g] > t: shift larger g-spaced elements right.
     # a[j] = t insert value into correct gapped position and repeat for next gap until gap = 1 completes final pass.
+    
+    
+    
+    
+    
+    
+    
