@@ -58,3 +58,12 @@ print("Sorted array:", arr)
     # for i in range(g, n): for each index in the gapped group and t = a[i]; j = i hold current value and index.
     # while j >= g and a[j-g] > t: shift larger g-spaced elements right.
     # a[j] = t insert value into correct gapped position and repeat for next gap until gap = 1 completes final pass.
+    
+    
+
+#Using Knuth sequence for gap values: [1, 4, 13, 40, 121, 364, 1093, ...]
+    # This method uses a different sequence of gaps known as the Knuth sequence, which is generated using the formula: gap = (3^k - 1) / 2 for k = 1, 2, 3, ... The sequence starts with 1 and grows exponentially. The algorithm 
+    # starts with the largest gap in the sequence that is less than the size of the array
+    # and reduces it according to this sequence until it reaches 1. The array is first sorted using the largest gap, then the next largest, and so on, until the final pass with a gap of 1, which is a standard insertion sort 
+    # ensuring that the array is fully sorted to their correct positions faster than a simple nearest neighbor exchange.
+def shell_sort_knuth(arr):
