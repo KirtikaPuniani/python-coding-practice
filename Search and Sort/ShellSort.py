@@ -66,6 +66,10 @@ print("Sorted array:", arr)
     # starts with the largest gap in the sequence that is less than the size of the array
     # and reduces it according to this sequence until it reaches 1. The array is first sorted using the largest gap, then the next largest, and so on, until the final pass with a gap of 1, which is a standard insertion sort 
     # ensuring that the array is fully sorted to their correct positions faster than a simple nearest neighbor exchange.
+#This traditional method starts with a gap equal to half of the array length and keeps halving the gap 
+# until it becomes 1. At each stage, elements that are gap positions apart are compared and rearranged,
+# resulting in a gradually sorted list.
+
 def shell_sort_knuth(arr):
     n = len(arr)
     # Generate Knuth gap sequence
