@@ -91,3 +91,34 @@ arr = [12, 34, 54, 2, 3]
 print("Original array:", arr)
 shell_sort_knuth(arr)
 print("Sorted array:", arr)
+
+
+
+
+#Using half gap division for gap values: [n/2, n/4, n/8, ..., 1]
+    # This method uses a simple approach of halving the gap size in each iteration. The algorithm 
+    # starts with a gap of n/2 (where n is the size of the array) and reduces it by half in each 
+    # subsequent iteration until it reaches 1. The array is first sorted using the largest gap, then 
+    # the next largest, and so on, until the final pass with a gap of 1, which is a standard insertion 
+    # sort ensuring that the array is fully sorted to their correct positions faster than a simple 
+    # nearest neighbor exchange.
+def shell_sort_half_gap(arr):
+    n = len(arr)
+    gap = n // 2
+
+    while gap > 0:
+        # Perform a gapped insertion sort for this gap size.
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            # Shift earlier gap-sorted elements up until the correct location for arr[i] is found
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            # Put temp (the original arr[i]) in its correct location
+            arr[j] = temp
+        gap //= 2  # Reduce the gap for the next iteration
+arr = [12, 34, 54, 2, 3]
+print("Original array:", arr)
+shell_sort_half_gap(arr)
+print("Sorted array:", arr)
