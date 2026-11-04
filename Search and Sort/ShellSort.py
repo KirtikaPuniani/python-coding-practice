@@ -126,3 +126,9 @@ arr = [12, 34, 54, 2, 3]
 print("Original array:", arr)
 shell_sort_half_gap(arr)
 print("Sorted array:", arr)
+
+# Explanation:
+# g = n // 2 start with half the array length and while g > 0: continue until gap reduces to 0.
+# for i in range(g, n): iterate each position in the gapped set.
+# t = a[i]; j = i store element and index and while j >= g and a[j-g] > t: shift larger g-spaced elements right.
+# a[j] = t insert element into its gapped place and g //= 2 reduce gap and repeat.
