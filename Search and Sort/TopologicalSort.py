@@ -46,9 +46,9 @@ g.add_edge(5, 0)
 g.add_edge(4, 0)
 g.add_edge(4, 1)
 g.add_edge(2, 3)
-# try:
-#     print("Topological Sort of the given graph:", g.topological_sort())
-# except ValueError as e:
-#     print(e)
+try:
+    print("Topological Sort of the given graph:", g.topological_sort())
+except ValueError as e:
+    print(e)
 
 g.topological_sort()
