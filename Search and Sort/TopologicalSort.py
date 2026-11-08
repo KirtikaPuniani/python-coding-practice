@@ -107,3 +107,8 @@ g.addEdge(2, 3)
 g.addEdge(3, 1)
 
 g.topologicalSort()
+
+# Explanation:
+# dfsSort() explores all dependencies of a node recursively before adding it to the stack.
+# Nodes are inserted at the front of the stack only after all their children are processed.
+# The final stack order [5, 4, 2, 3, 1, 0] ensures dependencies come before dependents.
