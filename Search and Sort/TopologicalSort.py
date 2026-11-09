@@ -118,6 +118,11 @@ g.topologicalSort()
 
 
 #Using Iterative DFS-Based approach for Topological Sorting
+#This method uses an iterative depth-first search (DFS) to perform topological sorting. It avoids recursion by using an explicit stack to manage the nodes to be processed. The algorithm ensures that each node is added to the 
+# final stack only after all its dependencies have been processed, maintaining the correct order for topological sorting. 
+# This method eliminates recursion and uses an explicit stack to simulate DFS traversal. It employs generators for efficient neighbor iteration and manually manages backtracking. This approach is useful for handling large graphs 
+# without hitting recursion limits.
+
 from collections import defaultdict
 class Graph:
     def __init__(self, vertices):
