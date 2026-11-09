@@ -157,3 +157,8 @@ g.addEdge(4, 1)
 g.addEdge(2, 3)
 g.addEdge(3, 1)
 g.topologicalSort()
+
+# Explanation:
+# working_stack simulates recursion manually to avoid recursion depth issues.
+# Each node’s neighbors are visited using iter(self.graph[v]) and pushed to the stack if unvisited.
+# Nodes are inserted into the final stack after all neighbors are processed, maintaining dependency order.
