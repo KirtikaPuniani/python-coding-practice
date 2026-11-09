@@ -112,3 +112,48 @@ g.topologicalSort()
 # dfsSort() explores all dependencies of a node recursively before adding it to the stack.
 # Nodes are inserted at the front of the stack only after all their children are processed.
 # The final stack order [5, 4, 2, 3, 1, 0] ensures dependencies come before dependents.
+
+
+
+
+
+#Using Iterative DFS-Based approach for Topological Sorting
+from collections import defaultdict
+class Graph:
+    def __init__(self, vertices):
+        self.graph = defaultdict(list)
+        self.V = vertices
+
+    def addEdge(self, u, v):
+        self.graph[u].append(v)
+
+    def topologicalSort(self):
+        visited = [False] * self.V
+        stack = []
+
+        for i in range(self.V):
+            if not visited[i]:
+                self.iterativeDFS(i, visited, stack)
+
+        print(stack[::-1])  # Reverse the stack to get the correct order
+
+    def iterativeDFS(self, start, visited, stack):
+        temp_stack = [start]
+
+        while temp_stack:
+            node = temp_stack.pop()
+            if not visited[node]:
+                visited[node] = True
+                stack.append(node)
+                for neighbor in reversed(self.graph[node]):
+                    if not visited[neighbor]:
+                        temp_stack.append(neighbor)     
+                        
+g = Graph(6)
+g.addEdge(5, 2)
+g.addEdge(5, 0)
+g.addEdge(4, 0)
+g.addEdge(4, 1)
+g.addEdge(2, 3)
+g.addEdge(3, 1)
+g.topologicalSort()
