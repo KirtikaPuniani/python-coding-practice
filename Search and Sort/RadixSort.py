@@ -10,3 +10,7 @@
     # Step 3: Sort by tens place. Sorting again by the tens digit gives -> [802, 2, 24, 45, 66, 170, 75, 90].
     # Step 4: Sort by hundreds place. Sorting by the hundreds digit results in -> [2, 24, 45, 66, 75, 90, 170, 802].
     # Step 5: After all digits are processed, the array is fully sorted. Final Output: [2, 24, 45, 66, 75, 90, 170, 802]
+    
+    
+
+#Using Counting Sort (digit  by digit approach)
