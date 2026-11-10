@@ -14,3 +14,6 @@
     
 
 #Using Counting Sort (digit  by digit approach)
+#This method is used to sort the elements based on the individual digits of the numbers. It ensures that the relative order of elements with equal keys is preserved, making it a stable sorting algorithm. Once the elements are 
+# sorted based on the current digit, the algorithm moves to the next significant digit and repeats the process until all digits have been processed. It's memory efficienty and works well for sorting integers with a 
+# limited range of digits.
