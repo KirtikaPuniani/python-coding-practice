@@ -59,3 +59,27 @@ print(arr)
 #Using bucket sort logic
 #This version uses digit-based bucketing to sort the elements. It distributes the numbers into buckets based on their digit values and then concatenates the buckets after sorting each digit. This approach is particularly 
 # effective for sorting integers with a limited range of digits.
+def radix_sort_bucket(arr):
+    max_num = max(arr)
+    exp = 1  # Represents current digit place (1, 10, 100, ...)
+
+    while max_num // exp > 0:
+        buckets = [[] for _ in range(10)]  # Create 10 buckets for digits 0–9
+
+        # Distribute elements into buckets based on current digit
+        for num in arr:
+            index = (num // exp) % 10
+            buckets[index].append(num)
+
+        # Concatenate buckets back into arr
+        arr.clear()
+        for bucket in buckets:
+            arr.extend(bucket)
+
+        exp *= 10
+    
+    return arr
+
+arr = [170, 45, 75, 90, 802, 24, 2, 66]
+sorted_arr = radix_sort_bucket(arr)
+print(sorted_arr)
