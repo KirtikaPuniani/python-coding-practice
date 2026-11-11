@@ -13,7 +13,7 @@
     
     
 
-#Using Counting Sort (digit  by digit approach)
+#Using Counting Sort (digit by digit approach)
 #This method is used to sort the elements based on the individual digits of the numbers. It ensures that the relative order of elements with equal keys is preserved, making it a stable sorting algorithm. Once the elements are 
 # sorted based on the current digit, the algorithm moves to the next significant digit and repeats the process until all digits have been processed. It's memory efficienty and works well for sorting integers with a 
 # limited range of digits.
@@ -50,3 +50,12 @@ def radix_sort(arr):
 arr = [170, 45, 75, 90, 802, 24, 2, 66]
 radix_sort(arr)
 print(arr)
+
+
+
+
+
+
+#Using bucket sort logic
+#This version uses digit-based bucketing to sort the elements. It distributes the numbers into buckets based on their digit values and then concatenates the buckets after sorting each digit. This approach is particularly 
+# effective for sorting integers with a limited range of digits.
