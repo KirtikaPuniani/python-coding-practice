@@ -84,7 +84,8 @@ arr = [170, 45, 75, 90, 802, 24, 2, 66]
 sorted_arr = radix_sort_bucket(arr)
 print(sorted_arr)
 
-
-
-
-
+# Explanation:
+#     Creates 10 buckets (0–9) for current digit values.
+#     Places each number into its respective bucket based on the digit.
+#     Merges all buckets to form a partially sorted list.
+#     Repeats the process for higher digit places until the array is sorted.
