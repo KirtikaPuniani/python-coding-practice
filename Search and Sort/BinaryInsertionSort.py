@@ -10,3 +10,12 @@
 #Input: [37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]
 #Output: [0, 12, 17, 23, 31, 37, 46, 54, 72, 88, 100]
 #Explanation: The algorithm places each unsorted element into its correct position in the sorted portion of the array using binary search, resulting in a fully sorted list.
+
+
+
+# Algorithm Steps
+    # Start with the second element (index 1) since the first element is considered sorted.
+    # Perform binary search on the sorted part of the array (from index 0 to i-1) to find the correct position for the current element.
+    # Shift all elements greater than the current element one position ahead to make space.
+    # Insert the current element at its correct position found by binary search.
+    # Repeat steps 2-4 for all remaining elements in the array until it becomes fully sorted.
