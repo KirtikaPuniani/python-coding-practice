@@ -23,7 +23,7 @@
     
     
 #Using User Defined Binary Search Function
-def binary_search(arr, val, start, end):
+def binary_search(arr, val, start, end):                    #Recursively finds the index to insert val in the sorted part of the list.
     if start == end:
         if arr[start] > val:
             return start
@@ -32,7 +32,7 @@ def binary_search(arr, val, start, end):
     if start > end:
         return start
 
-    mid = (start + end) // 2
+    mid = (start + end) // 2               #Finds the midpoint for comparison.
     if arr[mid] < val:
         return binary_search(arr, val, mid + 1, end)
     elif arr[mid] > val:
@@ -49,3 +49,7 @@ def insertion_sort(arr):
 
 print("Sorted array:")
 print(insertion_sort([37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]))
+
+# Explanation:
+# Recursive calls continue until the correct insertion point is found.
+# In insertion_sort(), each element is inserted at its proper place by using the found index.
