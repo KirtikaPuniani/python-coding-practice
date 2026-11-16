@@ -53,3 +53,24 @@ print(insertion_sort([37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]))
 # Explanation:
 # Recursive calls continue until the correct insertion point is found.
 # In insertion_sort(), each element is inserted at its proper place by using the found index.
+
+
+
+
+
+
+#Using bisect Module
+import bisect
+def binary_insertion_sort(arr, val, start, end):
+    index = bisect.bisect_left(arr[start:end+1], val)          #find position using bisect.bisect_left() to maintain sorted order within arr[start:end+1]. This function returns the index where val should be inserted to keep the list sorted.
+    return start + index
+
+def insertion_sort_bisect(arr):
+    for i in range(1, len(arr)):
+        val = arr[i]
+        j = binary_insertion_sort(arr, val, 0, i - 1)
+        #Insert the element at the correct position found by binary search using slicing and concatenation
+        arr = arr[:j] + [val] + arr[j:i] + arr[i + 1:]
+    return arr
+print("Sorted array using bisect module:")
+print(insertion_sort_bisect([37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]))
