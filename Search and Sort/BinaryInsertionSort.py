@@ -79,4 +79,8 @@ print(insertion_sort_bisect([37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]))
 
 
 
-
+# Explanation:
+# import bisect: Imports the module that provides efficient binary search operations.
+# bisect_left(arr[start:end+1], val): Finds the correct position for val in the given subarray.
+# for i in range(1, len(arr)): Loops through each element starting from the second one.
+# arr[:j] + [val] + arr[j:i] + arr[i+1:]: Rearranges the elements to insert val at the correct index.
