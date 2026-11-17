@@ -62,7 +62,8 @@ print(insertion_sort([37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]))
 #Using bisect Module
 import bisect
 def binary_insertion_sort(arr, val, start, end):
-    index = bisect.bisect_left(arr[start:end+1], val)          #find position using bisect.bisect_left() to maintain sorted order within arr[start:end+1]. This function returns the index where val should be inserted to keep the list sorted.
+    index = bisect.bisect_left(arr[start:end+1], val)          #find position using bisect.bisect_left() to maintain sorted order within arr[start:end+1]. 
+                                                               #This function returns the index where val should be inserted to keep the list sorted.
     return start + index
 
 def insertion_sort_bisect(arr):
@@ -74,3 +75,8 @@ def insertion_sort_bisect(arr):
     return arr
 print("Sorted array using bisect module:")
 print(insertion_sort_bisect([37, 23, 0, 17, 12, 72, 31, 46, 100, 88, 54]))
+
+
+
+
+
