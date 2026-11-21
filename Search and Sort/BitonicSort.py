@@ -11,3 +11,7 @@
     # It mainly works in two steps:
     # Form a bitonic sequence: divide the array into two halves- one sorted in ascending order and the other in descending order.
     # Merge: compare and swap elements to form smaller bitonic sequences until the entire array is sorted.
+
+
+
+
