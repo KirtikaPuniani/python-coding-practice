@@ -42,3 +42,10 @@ sort(a, n, up)
 print(*a)
 
 
+# Explanation:
+
+# bitonicSort(a, low, cnt, dire): recursively divides the array and sorts halves in opposite directions to form a bitonic sequence.
+# bitonicMerge(a, low, cnt, dire): compares and swaps elements based on direction to merge the bitonic sequence into sorted order.
+# k = cnt // 2: splits the current sequence into two equal halves.
+# dire == 1 / 0: determines sorting order - 1 for ascending, 0 for descending.
+# sort(a, N, up): wrapper function that initiates bitonic sorting on the full array.
