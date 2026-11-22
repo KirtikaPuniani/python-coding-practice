@@ -40,3 +40,5 @@ up = 1
 
 sort(a, n, up)
 print(*a)
+
+
