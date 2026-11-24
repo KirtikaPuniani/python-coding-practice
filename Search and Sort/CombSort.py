@@ -31,3 +31,11 @@ arr = [8, 4, 1, 3, -44, 23, -6, 28, 0]
 combSort(arr)
 
 print(*arr)
+
+
+# Explanation:
+    # getNextGap(gap): Shrinks the gap by 1.3 and ensures it doesn’t go below 1.
+    # combSort(arr): Sorts array using gradually reducing gaps.
+    # while gap != 1 or swapped: Continues until array is sorted (gap = 1 and no swaps).
+    # if arr[i] > arr[i + gap]: Swaps out-of-order elements at gap distance.
+    # combSort(arr) & print(*arr): Sorts and prints the final sorted array.
