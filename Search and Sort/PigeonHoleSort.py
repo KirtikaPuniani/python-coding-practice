@@ -3,3 +3,7 @@
 #Pigeonhole Sort is a simple sorting algorithm used when the number of elements (n) and the range of possible values (k) are roughly the same. It works by placing each element into a "pigeonhole" (a slot based on its value) and then reading them back in sorted order.
 
 Working of Pigeonhole Sort
+    1. Find range:
+    Find the minimum (min) and maximum (max) values in the list.
+    Range = max - min + 1
+    2. Create pigeonholes: Create an array (list) of empty pigeonholes - one for each possible value in the range.
