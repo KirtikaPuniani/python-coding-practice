@@ -12,3 +12,15 @@
 #         For each element in the list, place it in its corresponding pigeonhole using the formula:
 #         index = element - min
 #     4. Reconstruct sorted list: Traverse all pigeonholes in order, putting their elements back into the original list.
+
+
+
+
+
+Explanation:
+
+my_min, my_max = min(a), max(a): Finds smallest and largest elements.
+holes = [0] * (my_max - my_min + 1): Creates pigeonholes for all possible values.
+holes[x - my_min] += 1: Counts occurrences of each number.
+for count in range(size): Iterates through pigeonholes.
+a[i] = count + my_min: Fills array back in sorted order.
