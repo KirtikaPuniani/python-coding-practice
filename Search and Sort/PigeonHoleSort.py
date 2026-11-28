@@ -43,3 +43,10 @@ print(a)
 #     holes[x - my_min] += 1: Counts occurrences of each number.
 #     for count in range(size): Iterates through pigeonholes.
 #     a[i] = count + my_min: Fills array back in sorted order.
+
+
+
+
+
+
+
